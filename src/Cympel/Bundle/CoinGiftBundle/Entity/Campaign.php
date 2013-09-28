@@ -50,6 +50,39 @@ class Campaign implements iType
     protected $coinGifts;
 
     /**
+     * @var string
+     * The user's description of their idea as captured in the createForm
+     * @ORM\Column(type="text")
+     */
+    protected $idea;
+
+    /**
+     * @var string
+     * The user's inspiration to develop the idea
+     * @ORM\Column(type="text")
+     */
+    protected $inspiration;
+
+    /**
+     * @var string
+     * The benefits / impact the user indicates this idea will have on the community
+     * @ORM\Column(type="text")
+     */
+    protected $benefitsImpact;
+
+    /**
+     * @var \Doctrine\Common\Collections\ArrayCollection
+     * @ORM\OneToMany(targetEntity="NotificationMethod", mappedBy="campaign")
+     */
+    protected $notificationMethods;
+
+    /**
+     * @var \Doctrine\Common\Collections\ArrayCollection
+     * @ORM\OneToMany(targetEntity="ShareOnNetwork", mappedBy="campaign")
+     */
+    protected $shareOnNetworks;
+
+    /**
      * @param \Doctrine\Common\Collections\ArrayCollection $coinGifts
      */
     public function setCoinGifts($coinGifts)
@@ -113,12 +146,94 @@ class Campaign implements iType
         return $this->user;
     }
 
+    /**
+     * @param string $benefitsImpact
+     */
+    public function setBenefitsImpact($benefitsImpact)
+    {
+        $this->benefitsImpact = $benefitsImpact;
+    }
+
+    /**
+     * @return string
+     */
+    public function getBenefitsImpact()
+    {
+        return $this->benefitsImpact;
+    }
+
+    /**
+     * @param string $idea
+     */
+    public function setIdea($idea)
+    {
+        $this->idea = $idea;
+    }
+
+    /**
+     * @return string
+     */
+    public function getIdea()
+    {
+        return $this->idea;
+    }
+
+    /**
+     * @param string $inspiration
+     */
+    public function setInspiration($inspiration)
+    {
+        $this->inspiration = $inspiration;
+    }
+
+    /**
+     * @return string
+     */
+    public function getInspiration()
+    {
+        return $this->inspiration;
+    }
+
+    /**
+     * @param \Doctrine\Common\Collections\ArrayCollection $notificationMethods
+     */
+    public function setNotificationMethods($notificationMethods)
+    {
+        $this->notificationMethods = $notificationMethods;
+    }
+
+    /**
+     * @return \Doctrine\Common\Collections\ArrayCollection
+     */
+    public function getNotificationMethods()
+    {
+        return $this->notificationMethods;
+    }
+
+    /**
+     * @param \Doctrine\Common\Collections\ArrayCollection $shareOnNetworks
+     */
+    public function setShareOnNetworks($shareOnNetworks)
+    {
+        $this->shareOnNetworks = $shareOnNetworks;
+    }
+
+    /**
+     * @return \Doctrine\Common\Collections\ArrayCollection
+     */
+    public function getShareOnNetworks()
+    {
+        return $this->shareOnNetworks;
+    }
+
 
 
     public function __construct()
     {
         $this->comments = new ArrayCollection();
         $this->coinGifts = new ArrayCollection();
+        $this->notificationMethods = new ArrayCollection();
+        $this->shareOnNetworks = new ArrayCollection();
     }
 
     public function getType()

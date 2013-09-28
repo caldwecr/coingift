@@ -22,4 +22,9 @@ class DefaultController extends Controller
             'campaignName' => $campaignName,
         ));
     }
+
+    public function createFormAction(Request $request)
+    {
+
+    }
 }

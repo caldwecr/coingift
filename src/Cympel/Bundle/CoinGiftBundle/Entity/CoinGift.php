@@ -27,6 +27,7 @@ class CoinGift implements iType
      * @var int
      * @ORM\Id
      * @ORM\Column(type="bigint")
+     * @ORM\GeneratedValue(strategy="AUTO")
      */
     protected $id;
 
@@ -43,6 +44,54 @@ class CoinGift implements iType
      * @ORM\JoinColumn(name="campaign_id", referencedColumnName="id")
      */
     protected $campaign;
+
+    /**
+     * @param \Cympel\Bundle\CoinGiftBundle\Entity\Campaign $campaign
+     */
+    public function setCampaign($campaign)
+    {
+        $this->campaign = $campaign;
+    }
+
+    /**
+     * @return \Cympel\Bundle\CoinGiftBundle\Entity\Campaign
+     */
+    public function getCampaign()
+    {
+        return $this->campaign;
+    }
+
+    /**
+     * @param int $id
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
+    }
+
+    /**
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param \Cympel\Bundle\CoinGiftBundle\Entity\User $user
+     */
+    public function setUser($user)
+    {
+        $this->user = $user;
+    }
+
+    /**
+     * @return \Cympel\Bundle\CoinGiftBundle\Entity\User
+     */
+    public function getUser()
+    {
+        return $this->user;
+    }
 
     public function getType()
     {

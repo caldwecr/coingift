@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ad802f51-606e-4ac4-83c0-54a0cda202ed" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Cympel/Bundle/CoinGiftBundle/DataFixtures/ORM/LoadCampaignData.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Cympel/Bundle/CoinGiftBundle/DataFixtures/ORM/LoadCommentData.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Cympel/Bundle/CoinGiftBundle/DataFixtures/ORM/LoadVoteData.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Cympel/Bundle/CoinGiftBundle/Entity/Campaign.php" afterPath="$PROJECT_DIR$/src/Cympel/Bundle/CoinGiftBundle/Entity/Campaign.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Cympel/Bundle/CoinGiftBundle/Entity/Comment.php" afterPath="$PROJECT_DIR$/src/Cympel/Bundle/CoinGiftBundle/Entity/Comment.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Cympel/Bundle/CoinGiftBundle/DataFixtures/ORM/LoadUserData.php" afterPath="$PROJECT_DIR$/src/Cympel/Bundle/CoinGiftBundle/DataFixtures/ORM/LoadUserData.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Cympel/Bundle/CoinGiftBundle/Entity/Vote.php" afterPath="$PROJECT_DIR$/src/Cympel/Bundle/CoinGiftBundle/Entity/Vote.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Cympel/Bundle/CoinGiftBundle/DataFixtures/ORM/LoadCoinGiftData.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Cympel/Bundle/CoinGiftBundle/Entity/CoinGift.php" afterPath="$PROJECT_DIR$/src/Cympel/Bundle/CoinGiftBundle/Entity/CoinGift.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="coingift.iws" />
@@ -32,6 +27,7 @@
     <file path="/LoadVoteData.php" changelist="ad802f51-606e-4ac4-83c0-54a0cda202ed" time="1380404182399" ignored="false" />
     <file path="/LoadCampaignData.php" changelist="ad802f51-606e-4ac4-83c0-54a0cda202ed" time="1380403942819" ignored="false" />
     <file path="/LoadCommentData.php" changelist="ad802f51-606e-4ac4-83c0-54a0cda202ed" time="1380404086521" ignored="false" />
+    <file path="/LoadCoinGiftData.php" changelist="ad802f51-606e-4ac4-83c0-54a0cda202ed" time="1380404874845" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,10 +59,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Vote.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Vote.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Cympel/Bundle/CoinGiftBundle/Entity/Vote.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="7" selection-start="682" selection-end="682" vertical-scroll-proportion="-0.65198237">
+            <state line="29" column="5" selection-start="636" selection-end="674" vertical-scroll-proportion="-18.125">
               <folding>
                 <element signature="e#6#275#0" expanded="true" />
                 <element signature="e#324#370#0" expanded="true" />
@@ -75,10 +71,22 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="LoadCoinGiftData.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Cympel/Bundle/CoinGiftBundle/DataFixtures/ORM/LoadCoinGiftData.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="30" column="49" selection-start="978" selection-end="978" vertical-scroll-proportion="-18.75">
+              <folding>
+                <element signature="e#6#123#0" expanded="true" />
+                <element signature="e#182#231#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="LoadVoteData.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Cympel/Bundle/CoinGiftBundle/DataFixtures/ORM/LoadVoteData.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="33" selection-start="853" selection-end="853" vertical-scroll-proportion="-17.5">
+            <state line="8" column="0" selection-start="124" selection-end="994" vertical-scroll-proportion="-5.0">
               <folding>
                 <element signature="e#6#123#0" expanded="true" />
                 <element signature="e#182#231#0" expanded="true" />
@@ -113,7 +121,7 @@
       <file leaf-file-name="Campaign.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Cympel/Bundle/CoinGiftBundle/Entity/Campaign.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="115" column="0" selection-start="2283" selection-end="2283" vertical-scroll-proportion="-37.208332">
+            <state line="115" column="0" selection-start="2283" selection-end="2283" vertical-scroll-proportion="-71.875">
               <folding>
                 <element signature="e#6#212#0" expanded="true" />
                 <element signature="e#261#307#0" expanded="true" />
@@ -134,23 +142,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CoinGift.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="CoinGift.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Cympel/Bundle/CoinGiftBundle/Entity/CoinGift.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="0" selection-start="180" selection-end="356" vertical-scroll-proportion="-6.25">
+            <state line="29" column="5" selection-start="592" selection-end="592" vertical-scroll-proportion="0.4790749">
               <folding>
                 <element signature="e#6#179#0" expanded="true" />
                 <element signature="e#228#274#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="composer.json" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/composer.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="90" selection-start="1515" selection-end="1515" vertical-scroll-proportion="-20.625">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -173,14 +172,12 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/Cympel/Bundle/CoinGiftBundle/Tests/Controller/DefaultControllerCampaignTest.php" />
         <option value="$PROJECT_DIR$/src/Cympel/Bundle/CoinGiftBundle/Controller/DefaultController.php" />
         <option value="$PROJECT_DIR$/src/Cympel/Bundle/CoinGiftBundle/Resources/config/routing.yml" />
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/src/Cympel/Bundle/CoinGiftBundle/Entity/iType.php" />
         <option value="$PROJECT_DIR$/app/AppKernel.php" />
         <option value="$PROJECT_DIR$/src/Cympel/Bundle/CoinGiftBundle/Entity/User.php" />
-        <option value="$PROJECT_DIR$/src/Cympel/Bundle/CoinGiftBundle/Entity/CoinGift.php" />
         <option value="$PROJECT_DIR$/src/Cympel/Bundle/CoinGiftBundle/Entity/Parent.php" />
         <option value="$PROJECT_DIR$/src/Cympel/Bundle/CoinGiftBundle/DataFixtures/ORM/LoadUserData.php" />
         <option value="$PROJECT_DIR$/src/Cympel/Bundle/CoinGiftBundle/Entity/Campaign.php" />
@@ -189,6 +186,8 @@
         <option value="$PROJECT_DIR$/src/Cympel/Bundle/CoinGiftBundle/DataFixtures/ORM/LoadVoteData.php" />
         <option value="$PROJECT_DIR$/src/Cympel/Bundle/CoinGiftBundle/Entity/Comment.php" />
         <option value="$PROJECT_DIR$/src/Cympel/Bundle/CoinGiftBundle/Entity/Vote.php" />
+        <option value="$PROJECT_DIR$/src/Cympel/Bundle/CoinGiftBundle/DataFixtures/ORM/LoadCoinGiftData.php" />
+        <option value="$PROJECT_DIR$/src/Cympel/Bundle/CoinGiftBundle/Entity/CoinGift.php" />
       </list>
     </option>
   </component>
@@ -596,6 +595,7 @@
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="recentsLimit" value="5" />
     <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
     <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
@@ -638,7 +638,10 @@
       <recent name="$PROJECT_DIR$/src/Cympel/Bundle/CoinGiftBundle/Resources/views/Default" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="PHP Script.CoinGift.php">
+    <configuration default="false" name="CoinGift.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/src/Cympel/Bundle/CoinGiftBundle/Entity/CoinGift.php">
+      <method />
+    </configuration>
     <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner />
       <method />
@@ -649,7 +652,14 @@
     <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
       <method />
     </configuration>
-    <list size="0" />
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="PHP Script.CoinGift.php" />
+    </list>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="PHP Script.CoinGift.php" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
   <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false" SSL_PROTOCOLS="sslv3">
@@ -762,13 +772,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Cympel/Bundle/CoinGiftBundle/Resources/views/Default/campaign.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="34" selection-start="34" selection-end="34" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Cympel/Bundle/CoinGiftBundle/Controller/DefaultController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="17" column="0" selection-start="414" selection-end="414" vertical-scroll-proportion="0.43074325">
@@ -811,16 +814,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Cympel/Bundle/CoinGiftBundle/Entity/CoinGift.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="180" selection-end="356" vertical-scroll-proportion="-6.25">
-          <folding>
-            <element signature="e#6#179#0" expanded="true" />
-            <element signature="e#228#274#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Cympel/Bundle/CoinGiftBundle/Entity/User.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="95" column="58" selection-start="2085" selection-end="2085" vertical-scroll-proportion="-59.375">
@@ -831,9 +824,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Cympel/Bundle/CoinGiftBundle/DataFixtures/ORM/LoadCommentData.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="45" selection-start="481" selection-end="481" vertical-scroll-proportion="0.24779736">
+          <folding>
+            <element signature="e#6#123#0" expanded="true" />
+            <element signature="e#182#231#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Cympel/Bundle/CoinGiftBundle/Entity/Comment.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="43" selection-start="648" selection-end="648" vertical-scroll-proportion="-5.3333335">
+          <folding>
+            <element signature="e#6#191#0" expanded="true" />
+            <element signature="e#240#286#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Cympel/Bundle/CoinGiftBundle/Entity/Campaign.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="115" column="0" selection-start="2283" selection-end="2283" vertical-scroll-proportion="-37.208332">
+        <state line="115" column="0" selection-start="2283" selection-end="2283" vertical-scroll-proportion="-71.875">
           <folding>
             <element signature="e#6#212#0" expanded="true" />
             <element signature="e#261#307#0" expanded="true" />
@@ -844,16 +857,6 @@
     <entry file="file://$PROJECT_DIR$/src/Cympel/Bundle/CoinGiftBundle/DataFixtures/ORM/LoadCampaignData.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="0" selection-start="124" selection-end="931" vertical-scroll-proportion="-5.0">
-          <folding>
-            <element signature="e#6#123#0" expanded="true" />
-            <element signature="e#182#231#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Cympel/Bundle/CoinGiftBundle/DataFixtures/ORM/LoadCommentData.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="45" selection-start="481" selection-end="481" vertical-scroll-proportion="0.24779736">
           <folding>
             <element signature="e#6#123#0" expanded="true" />
             <element signature="e#182#231#0" expanded="true" />
@@ -872,7 +875,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Cympel/Bundle/CoinGiftBundle/DataFixtures/ORM/LoadVoteData.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="33" selection-start="853" selection-end="853" vertical-scroll-proportion="-17.5">
+        <state line="8" column="0" selection-start="124" selection-end="994" vertical-scroll-proportion="-5.0">
           <folding>
             <element signature="e#6#123#0" expanded="true" />
             <element signature="e#182#231#0" expanded="true" />
@@ -880,22 +883,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Cympel/Bundle/CoinGiftBundle/Entity/Comment.php">
+    <entry file="file://$PROJECT_DIR$/src/Cympel/Bundle/CoinGiftBundle/DataFixtures/ORM/LoadCoinGiftData.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="43" selection-start="648" selection-end="648" vertical-scroll-proportion="-5.3333335">
+        <state line="30" column="49" selection-start="978" selection-end="978" vertical-scroll-proportion="-18.75">
           <folding>
-            <element signature="e#6#191#0" expanded="true" />
-            <element signature="e#240#286#0" expanded="true" />
+            <element signature="e#6#123#0" expanded="true" />
+            <element signature="e#182#231#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Cympel/Bundle/CoinGiftBundle/Entity/Vote.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="7" selection-start="682" selection-end="682" vertical-scroll-proportion="-0.65198237">
+        <state line="29" column="5" selection-start="636" selection-end="674" vertical-scroll-proportion="-18.125">
           <folding>
             <element signature="e#6#275#0" expanded="true" />
             <element signature="e#324#370#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Cympel/Bundle/CoinGiftBundle/Entity/CoinGift.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="5" selection-start="592" selection-end="592" vertical-scroll-proportion="0.4790749">
+          <folding>
+            <element signature="e#6#179#0" expanded="true" />
+            <element signature="e#228#274#0" expanded="true" />
           </folding>
         </state>
       </provider>

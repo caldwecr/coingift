@@ -40,9 +40,22 @@ class Comment implements iType
     /**
      * @var Campaign
      * @ORM\ManyToOne(targetEntity="Campaign", inversedBy="comments")
-     * @ORM\JoinColumn(name="parent_id", referencedColumnName="id")
+     * @ORM\JoinColumn(name="campaign_id", referencedColumnName="id")
+     */
+    protected $campaign;
+
+    /**
+     * @var Comment
+     * @ORM\ManyToOne(targetEntity="Comment", inversedBy="children")
+     * @ORM\JoinColumn(name="parent_id", referencedColumnName="id", nullable=true)
      */
     protected $parent;
+
+    /**
+     * @var \Doctrine\Common\Collections\ArrayCollection
+     * @ORM\OneToMany(targetEntity="Comment", mappedBy="parent")
+     */
+    protected $children;
 
     /**
      * @var \Doctrine\Common\Collections\ArrayCollection
@@ -54,6 +67,7 @@ class Comment implements iType
     public function __construct()
     {
         $this->votes = new ArrayCollection();
+        $this->children = new ArrayCollection();
     }
 
     public function getType()

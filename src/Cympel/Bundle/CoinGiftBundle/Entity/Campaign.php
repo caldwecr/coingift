@@ -39,7 +39,7 @@ class Campaign implements iType
 
     /**
      * @var array of Comment objects
-     * @ORM\OneToMany(targetEntity="Comment", mappedBy="parent")
+     * @ORM\OneToMany(targetEntity="Comment", mappedBy="campaign")
      */
     protected $comments;
 

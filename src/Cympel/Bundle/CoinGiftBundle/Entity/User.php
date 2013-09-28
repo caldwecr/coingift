@@ -13,6 +13,7 @@ namespace Cympel\Bundle\CoinGiftBundle\Entity;
 
 use Cympel\Bundle\CoinGiftBundle\Entity\iType;
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * Class User
@@ -71,6 +72,38 @@ class User implements iType
      * If this value is true the user cannot perform any actions in the application
      */
     protected $disabled;
+
+    /**
+     * @var array of Vote objects
+     * @ORM\OneToMany(targetEntity="Vote", mappedBy="user")
+     */
+    protected $votes;
+
+    /**
+     * @var array of Campaign objects
+     * @ORM\OneToMany(targetEntity="Campaign", mappedBy="user")
+     */
+    protected $campaigns;
+
+    /**
+     * @var array of Comment objects
+     * @ORM\OneToMany(targetEntity="Comment", mappedBy="user")
+     */
+    protected $comments;
+
+    /**
+     * @var array of CoinGift objects
+     * @ORM\OneToMany(targetEntity="CoinGift", mappedBy="user")
+     */
+    protected $coinGifts;
+
+    public function __construct()
+    {
+        $this->votes = new ArrayCollection();
+        $this->campaigns = new ArrayCollection();
+        $this->comments = new ArrayCollection();
+        $this->coinGifts = new ArrayCollection();
+    }
 
     /**
      * @param boolean $bankCustomer

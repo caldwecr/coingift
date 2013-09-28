@@ -1,13 +1,50 @@
+
 <!DOCTYPE html>
-<html>
+<!--[if lt IE 7]> <html class="ie ie6" dir="ltr" lang="en-US"> <![endif]-->
+<!--[if IE 7]>    <html class="ie ie7" dir="ltr" lang="en-US"> <![endif]-->
+<!--[if IE 8]>    <html class="ie ie8" dir="ltr" lang="en-US"> <![endif]-->
+<!--[if IE 9]>    <html class="ie ie9" dir="ltr" lang="en-US"> <![endif]-->
+<!--[if IE 10]>   <html class="ie ie10" dir="ltr" lang="en-US"> <![endif]-->
+<!--[if !IE]> --> <html lang="en-US"> <![endif]-->
     <head>
-        <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" >
+        <title>{% block title %}Cympel | Digital Advertising Cymplified {% endblock %}</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />                 
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link rel="shortcut icon" type="image/ico" href="/assets/images/favicon.ico" />
+        {% block stylesheets %}
+        <!-- stylesheets -->
+
+        <link href="{{ asset('assets/css/main.css') }}" type="text/css" rel="stylesheet" />
+        <!--[if lte IE 8]>
+            <link href="{{ asset('assets/css/ie8.css') }}" type="text/css" rel="stylesheet" />
+        <![endif]-->
+
+        <!-- /stylesheets -->
+        {% endblock %}
+        {% block javascripts %}
+        <!-- scripts (if possible place these scripts at the bottom) -->
+        {% javascripts
+            'assets/js/custom.modernizr.js'
+                filter='?uglifyjs2' %}
+            <script src="{{ asset_url }}"></script>
+        {% endjavascripts %}
+
+        <script src="/assets/js/custom.modernizr.js"></script>        
+        
+        <!-- scripts (if possible place these scripts at the bottom) -->
+        <!--[if lt IE 9]>
+            <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->        
+        {% endblock %}
     </head>
-    <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
-    </body>
+    {% block body %}
+        <body>
+            <h1>Welcome</h1>
+
+
+        </body>
+    {% endblock %}
 </html>

@@ -10,7 +10,7 @@ namespace Cympel\Bundle\CoinGiftBundle\DataFixtures\ORM;
 
 use Doctrine\Common\DataFixtures\FixtureInterface;
 use Doctrine\Common\Persistence\ObjectManager;
-use Cympel\Bundle\CoinGiftBundle\User;
+use Cympel\Bundle\CoinGiftBundle\Entity\User;
 
 class LoadUserData implements FixtureInterface
 {
@@ -25,7 +25,8 @@ class LoadUserData implements FixtureInterface
         $user->setLastName("Smith");
         $user->setBankCustomer(true);
         $user->setCoinBalance(500);
-
+        $user->setCreated(time());
+        $user->setDisabled(false);
         $manager->persist($user);
         $manager->flush();
     }

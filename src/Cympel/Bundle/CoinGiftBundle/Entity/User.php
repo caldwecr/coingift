@@ -9,13 +9,15 @@
  * This class represents a user of the CoinGift system. A user can be a customer of the bank or not; only customers of the bank are able to gift, all customers can receive
  */
 
-namespace Cympel\Bundle\CoinGiftBundle;
+namespace Cympel\Bundle\CoinGiftBundle\Entity;
 
+use Cympel\Bundle\CoinGiftBundle\Entity\iType;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
  * Class User
  * @package Cympel\Bundle\CoinGiftBundle
+ *
  * @ORM\Entity
  * @ORM\Table(name="coinGiftUser")
  */
@@ -48,7 +50,7 @@ class User implements iType
 
     /**
      * @var int
-     * @ORM\Column(type="bigint)
+     * @ORM\Column(type="bigint")
      *
      * The balance (in pennies) available to the User for gifting
      */

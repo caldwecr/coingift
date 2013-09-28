@@ -1,0 +1,42 @@
+{{ form_start(form) }}
+    {{ form_errors(form) }}
+
+    <div>
+        {{ form_label(form.id) }}
+        {{ form_errors(form.id) }}
+        {{ form_widget(form.id) }}
+    </div>
+
+    <div>
+        {{ form_label(form.idea) }}
+        {{ form_errors(form.idea) }}
+        {{ form_widget(form.idea) }}
+    </div>
+
+    <div>
+        {{ form_label(form.inspiration) }}
+        {{ form_errors(form.inspiration) }}
+        {{ form_widget(form.inspiration) }}
+    </div>
+
+    <div>
+        {{ form_label(form.benefitsImpact) }}
+        {{ form_errors(form.benefitsImpact) }}
+        {{ form_widget(form.benefitsImpact) }}
+    </div>
+
+    <div>
+        {{ form_label(form.notificationMethods) }}
+        {{ form_errors(form.notificationMethods) }}
+        {{ form_widget(form.notificationMethods) }}
+    </div>
+
+    <div>
+        {{ form_label(form.shareOnNetworks) }}
+        {{ form_errors(form.shareOnNetworks) }}
+        {{ form_widget(form.shareOnNetworks) }}
+    </div>
+
+<input type="submit" />
+
+{{ form_end(form) }}

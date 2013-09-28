@@ -3,10 +3,8 @@
  * Created by JetBrains PhpStorm.
  * User: caldwecr
  * Date: 9/28/13
- * Time: 1:19 PM
+ * Time: 5:07 PM
  * Copyright Cympel Inc
- *
- * Represents a gift given from a user to a campaign
  */
 namespace Cympel\Bundle\CoinGiftBundle\Entity;
 
@@ -15,13 +13,13 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Class Comment
+ * Class NotificationMethod
  * @package Cympel\Bundle\CoinGiftBundle\Entity
  *
  * @ORM\Entity
- * @ORM\Table(name="coinGift")
+ * @ORM\Table(name="coinGiftNotificationMethod")
  */
-class CoinGift implements iType
+class NotificationMethod implements iType
 {
     /**
      * @var int
@@ -32,18 +30,27 @@ class CoinGift implements iType
     protected $id;
 
     /**
-     * @var User
-     * @ORM\ManyToOne(targetEntity="User", inversedBy="coinGifts")
-     * @ORM\JoinColumn(name="user_id", referencedColumnName="id")
-     */
-    protected $user;
-
-    /**
      * @var Campaign
-     * @ORM\ManyToOne(targetEntity="Campaign", inversedBy="coinGifts")
+     * @ORM\ManyToOne(targetEntity="Campaign", inversedBy="notificationMethods")
      * @ORM\JoinColumn(name="campaign_id", referencedColumnName="id")
      */
     protected $campaign;
+
+    /**
+     * @var string
+     * @ORM\Column(type="string", length=10)
+     *
+     * Currently supported options: 'E-mail' and 'Text Message'
+     */
+    protected $notificationType;
+
+    public static function getNotificationMethodChoices()
+    {
+        return array(
+            'E-mail' => 'E-mail',
+            'Text Message' => 'Text Message',
+        );
+    }
 
     /**
      * @param \Cympel\Bundle\CoinGiftBundle\Entity\Campaign $campaign
@@ -70,6 +77,22 @@ class CoinGift implements iType
     }
 
     /**
+     * @param string $notificationType
+     */
+    public function setNotificationType($notificationType)
+    {
+        $this->notificationType = $notificationType;
+    }
+
+    /**
+     * @return string
+     */
+    public function getNotificationType()
+    {
+        return $this->notificationType;
+    }
+
+    /**
      * @return int
      */
     public function getId()
@@ -77,25 +100,9 @@ class CoinGift implements iType
         return $this->id;
     }
 
-    /**
-     * @param \Cympel\Bundle\CoinGiftBundle\Entity\User $user
-     */
-    public function setUser($user)
-    {
-        $this->user = $user;
-    }
-
-    /**
-     * @return \Cympel\Bundle\CoinGiftBundle\Entity\User
-     */
-    public function getUser()
-    {
-        return $this->user;
-    }
-
     public function getType()
     {
-        return 'CoinGift';
+        return 'NotificationMethod';
     }
 
 }

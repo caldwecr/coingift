@@ -6,7 +6,7 @@
  * Time: 1:24 PM
  * Copyright Cympel Inc
  */
-namespace Cympel\Bundle\CoinGiftBundle;
+namespace Cympel\Bundle\CoinGiftBundle\Entity;
 
 interface iType
 {

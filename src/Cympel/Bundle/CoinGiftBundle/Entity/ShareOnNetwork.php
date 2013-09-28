@@ -3,25 +3,22 @@
  * Created by JetBrains PhpStorm.
  * User: caldwecr
  * Date: 9/28/13
- * Time: 1:19 PM
+ * Time: 5:07 PM
  * Copyright Cympel Inc
- *
- * Represents a gift given from a user to a campaign
  */
 namespace Cympel\Bundle\CoinGiftBundle\Entity;
 
 use Cympel\Bundle\CoinGiftBundle\Entity\iType;
-use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Class Comment
+ * Class ShareOnNetwork
  * @package Cympel\Bundle\CoinGiftBundle\Entity
  *
  * @ORM\Entity
- * @ORM\Table(name="coinGift")
+ * @ORM\Table(name="coinGiftShareOnNetwork")
  */
-class CoinGift implements iType
+class ShareOnNetwork implements iType
 {
     /**
      * @var int
@@ -32,15 +29,26 @@ class CoinGift implements iType
     protected $id;
 
     /**
-     * @var User
-     * @ORM\ManyToOne(targetEntity="User", inversedBy="coinGifts")
-     * @ORM\JoinColumn(name="user_id", referencedColumnName="id")
+     * @var string
+     * @ORM\Column(type="string", length=20)
+     *
+     * Currently supported options: 'Facebook', 'Twitter', 'LinkedIn', 'Vine'
      */
-    protected $user;
+    protected $networkName;
+
+    public static function getShareOnNetworkChoices()
+    {
+        return array(
+            'Facebook' => 'Facebook',
+            'Twitter' => 'Twitter',
+            'LinkedIn' => 'LinkedIn',
+            'Vine' => 'Vine',
+        );
+    }
 
     /**
      * @var Campaign
-     * @ORM\ManyToOne(targetEntity="Campaign", inversedBy="coinGifts")
+     * @ORM\ManyToOne(targetEntity="Campaign", inversedBy="shareOnNetworks")
      * @ORM\JoinColumn(name="campaign_id", referencedColumnName="id")
      */
     protected $campaign;
@@ -78,24 +86,24 @@ class CoinGift implements iType
     }
 
     /**
-     * @param \Cympel\Bundle\CoinGiftBundle\Entity\User $user
+     * @param string $networkName
      */
-    public function setUser($user)
+    public function setNetworkName($networkName)
     {
-        $this->user = $user;
+        $this->networkName = $networkName;
     }
 
     /**
-     * @return \Cympel\Bundle\CoinGiftBundle\Entity\User
+     * @return string
      */
-    public function getUser()
+    public function getNetworkName()
     {
-        return $this->user;
+        return $this->networkName;
     }
 
     public function getType()
     {
-        return 'CoinGift';
+        return 'ShareOnNetwork';
     }
 
 }

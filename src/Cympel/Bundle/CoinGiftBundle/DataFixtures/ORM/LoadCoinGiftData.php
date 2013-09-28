@@ -3,38 +3,36 @@
  * Created by JetBrains PhpStorm.
  * User: caldwecr
  * Date: 9/28/13
- * Time: 1:31 PM
+ * Time: 4:46 PM
  * Copyright Cympel Inc
  */
 namespace Cympel\Bundle\CoinGiftBundle\DataFixtures\ORM;
 
+use Cympel\Bundle\CoinGiftBundle\Entity\Campaign;
+use Cympel\Bundle\CoinGiftBundle\Entity\CoinGift;
+use Cympel\Bundle\CoinGiftBundle\Entity\Vote;
 use Doctrine\Common\DataFixtures\AbstractFixture;
 use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
 use Doctrine\Common\Persistence\ObjectManager;
 use Cympel\Bundle\CoinGiftBundle\Entity\User;
 
-class LoadUserData extends AbstractFixture implements OrderedFixtureInterface
+class LoadCoinGiftData extends AbstractFixture implements OrderedFixtureInterface
 {
     /**
      * {@inheritDoc}
      */
     public function load(ObjectManager $manager)
     {
-        $user = new User();
-        $user->setId("coolguy123");
-        $user->setFirstName("Chris");
-        $user->setLastName("Smith");
-        $user->setBankCustomer(true);
-        $user->setCoinBalance(500);
-        $user->setCreated(time());
-        $user->setDisabled(false);
-        $manager->persist($user);
+        $coinGift = new CoinGift();
+        $coinGift->setUser($this->getReference('user'));
+        $coinGift->setCampaign($this->getReference('campaign'));
+        $manager->persist($coinGift);
         $manager->flush();
-        $this->addReference('user', $user);
+        $this->addReference('coinGift', $coinGift);
     }
 
     public function getOrder()
     {
-        return 1;
+        return 5;
     }
 }

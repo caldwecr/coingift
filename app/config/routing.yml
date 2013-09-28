@@ -1,0 +1,4 @@
+cympelCoinGift:
+    resource: "@CympelCoinGiftBundle/Resources/config/routing.yml"
+    prefix:   /coin/gift
+

@@ -1,0 +1,9 @@
+giftcoinHome:
+    pattern:  /home
+    defaults: { _controller: CympelCoinGiftBundle:Default:index }
+giftcoinCreate:
+    pattern: /create
+    defaults: { _controller: CympelCoinGiftBundle:Default:create }
+giftcoinCampaign:
+    pattern: /campaign/{campaignName}
+    defaults: { _controller: CympelCoinGiftBundle:Default:campaign }

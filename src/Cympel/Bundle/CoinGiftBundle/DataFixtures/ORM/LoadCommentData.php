@@ -3,38 +3,36 @@
  * Created by JetBrains PhpStorm.
  * User: caldwecr
  * Date: 9/28/13
- * Time: 1:31 PM
+ * Time: 4:33 PM
  * Copyright Cympel Inc
  */
 namespace Cympel\Bundle\CoinGiftBundle\DataFixtures\ORM;
 
+use Cympel\Bundle\CoinGiftBundle\Entity\Campaign;
+use Cympel\Bundle\CoinGiftBundle\Entity\Comment;
 use Doctrine\Common\DataFixtures\AbstractFixture;
 use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
 use Doctrine\Common\Persistence\ObjectManager;
 use Cympel\Bundle\CoinGiftBundle\Entity\User;
 
-class LoadUserData extends AbstractFixture implements OrderedFixtureInterface
+class LoadCommentData extends AbstractFixture implements OrderedFixtureInterface
 {
     /**
      * {@inheritDoc}
      */
     public function load(ObjectManager $manager)
     {
-        $user = new User();
-        $user->setId("coolguy123");
-        $user->setFirstName("Chris");
-        $user->setLastName("Smith");
-        $user->setBankCustomer(true);
-        $user->setCoinBalance(500);
-        $user->setCreated(time());
-        $user->setDisabled(false);
-        $manager->persist($user);
+        $comment = new Comment();
+        $comment->setUser($this->getReference('user'));
+        $comment->setCampaign($this->getReference('campaign'));
+        $comment->setParent(null);
+        $manager->persist($comment);
         $manager->flush();
-        $this->addReference('user', $user);
+        $this->addReference('comment', $comment);
     }
 
     public function getOrder()
     {
-        return 1;
+        return 3;
     }
 }

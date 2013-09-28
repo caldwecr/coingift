@@ -27,6 +27,7 @@ class Vote implements iType
      * @var int
      * @ORM\Id
      * @ORM\Column(type="bigint")
+     * @ORM\GeneratedValue(strategy="AUTO")
      */
     protected $id;
 
@@ -49,6 +50,72 @@ class Vote implements iType
      * @ORM\JoinColumn(name="comment_id", referencedColumnName="id")
      */
     protected $comment;
+
+    /**
+     * @param \Cympel\Bundle\CoinGiftBundle\Entity\Comment $comment
+     */
+    public function setComment($comment)
+    {
+        $this->comment = $comment;
+    }
+
+    /**
+     * @return \Cympel\Bundle\CoinGiftBundle\Entity\Comment
+     */
+    public function getComment()
+    {
+        return $this->comment;
+    }
+
+    /**
+     * @param int $id
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
+    }
+
+    /**
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param \Cympel\Bundle\CoinGiftBundle\Entity\User $user
+     */
+    public function setUser($user)
+    {
+        $this->user = $user;
+    }
+
+    /**
+     * @return \Cympel\Bundle\CoinGiftBundle\Entity\User
+     */
+    public function getUser()
+    {
+        return $this->user;
+    }
+
+    /**
+     * @param int $value
+     */
+    public function setValue($value)
+    {
+        $this->value = $value;
+    }
+
+    /**
+     * @return int
+     */
+    public function getValue()
+    {
+        return $this->value;
+    }
+
+
 
     public function getType()
     {

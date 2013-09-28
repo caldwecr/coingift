@@ -49,6 +49,72 @@ class Campaign implements iType
      */
     protected $coinGifts;
 
+    /**
+     * @param \Doctrine\Common\Collections\ArrayCollection $coinGifts
+     */
+    public function setCoinGifts($coinGifts)
+    {
+        $this->coinGifts = $coinGifts;
+    }
+
+    /**
+     * @return \Doctrine\Common\Collections\ArrayCollection
+     */
+    public function getCoinGifts()
+    {
+        return $this->coinGifts;
+    }
+
+    /**
+     * @param array $comments
+     */
+    public function setComments($comments)
+    {
+        $this->comments = $comments;
+    }
+
+    /**
+     * @return array
+     */
+    public function getComments()
+    {
+        return $this->comments;
+    }
+
+    /**
+     * @param string $id
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
+    }
+
+    /**
+     * @return string
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param \Cympel\Bundle\CoinGiftBundle\Entity\User $user
+     */
+    public function setUser($user)
+    {
+        $this->user = $user;
+    }
+
+    /**
+     * @return \Cympel\Bundle\CoinGiftBundle\Entity\User
+     */
+    public function getUser()
+    {
+        return $this->user;
+    }
+
+
+
     public function __construct()
     {
         $this->comments = new ArrayCollection();

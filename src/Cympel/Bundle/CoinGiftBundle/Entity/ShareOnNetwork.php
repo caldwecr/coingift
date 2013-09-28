@@ -36,6 +36,16 @@ class ShareOnNetwork implements iType
      */
     protected $networkName;
 
+    public static function getShareOnNetworkChoices()
+    {
+        return array(
+            'Facebook' => 'Facebook',
+            'Twitter' => 'Twitter',
+            'LinkedIn' => 'LinkedIn',
+            'Vine' => 'Vine',
+        );
+    }
+
     /**
      * @var Campaign
      * @ORM\ManyToOne(targetEntity="Campaign", inversedBy="shareOnNetworks")

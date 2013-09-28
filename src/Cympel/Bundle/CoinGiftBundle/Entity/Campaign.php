@@ -207,7 +207,7 @@ class Campaign implements iType
      */
     public function getNotificationMethods()
     {
-        return $this->notificationMethods;
+        return $this->notificationMethods->toArray();
     }
 
     /**
@@ -223,10 +223,8 @@ class Campaign implements iType
      */
     public function getShareOnNetworks()
     {
-        return $this->shareOnNetworks;
+        return $this->shareOnNetworks->toArray();
     }
-
-
 
     public function __construct()
     {

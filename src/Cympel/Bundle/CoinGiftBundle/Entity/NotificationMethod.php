@@ -44,6 +44,14 @@ class NotificationMethod implements iType
      */
     protected $notificationType;
 
+    public static function getNotificationMethodChoices()
+    {
+        return array(
+            'E-mail' => 'E-mail',
+            'Text Message' => 'Text Message',
+        );
+    }
+
     /**
      * @param \Cympel\Bundle\CoinGiftBundle\Entity\Campaign $campaign
      */

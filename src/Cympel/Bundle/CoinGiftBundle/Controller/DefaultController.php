@@ -80,4 +80,23 @@ class DefaultController extends Controller
             'nextFourCampaigns' => $nextFourCampaigns,
         ));
     }
+
+    public function popularAction()
+    {
+        $repository = $this->getDoctrine()
+            ->getRepository('CympelCoinGiftBundle:Campaign');
+        $query = $repository->createQueryBuilder('c')
+            ->setMaxResults(4)
+            ->getQuery();
+        $firstFourCampaigns = $query->getResult();
+        $query = $repository->createQueryBuilder('c')
+            ->setMaxResults(4)
+            ->setFirstResult(4)
+            ->getQuery();
+        $nextFourCampaigns = $query->getResult();
+        return $this->render('CympelCoinGiftBundle:Default:popular.html.twig', array(
+            'firstFourCampaigns' => $firstFourCampaigns,
+            'nextFourCampaigns' => $nextFourCampaigns,
+        ));
+    }
 }

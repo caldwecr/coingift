@@ -2,15 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ad802f51-606e-4ac4-83c0-54a0cda202ed" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Cympel/Bundle/CoinGiftBundle/Resources/views/Default/create.html.twig" afterPath="$PROJECT_DIR$/src/Cympel/Bundle/CoinGiftBundle/Resources/views/Default/create.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Cympel/Bundle/CoinGiftBundle/Resources/views/Default/popular.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Cympel/Bundle/CoinGiftBundle/Controller/DefaultController.php" afterPath="$PROJECT_DIR$/src/Cympel/Bundle/CoinGiftBundle/Controller/DefaultController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Cympel/Bundle/CoinGiftBundle/Resources/views/Default/index.html.twig" afterPath="$PROJECT_DIR$/src/Cympel/Bundle/CoinGiftBundle/Resources/views/Default/index.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/stuff/css/main.css" afterPath="$PROJECT_DIR$/web/stuff/css/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/stuff/scss/main.scss" afterPath="$PROJECT_DIR$/web/stuff/scss/main.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Cympel/Bundle/CoinGiftBundle/Resources/config/routing.yml" afterPath="$PROJECT_DIR$/src/Cympel/Bundle/CoinGiftBundle/Resources/config/routing.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="coingift.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="ad802f51-606e-4ac4-83c0-54a0cda202ed" time="1380416576796" ignored="false" />
-    <file path="/routing.yml" changelist="ad802f51-606e-4ac4-83c0-54a0cda202ed" time="1380417514781" ignored="false" />
+    <file path="/routing.yml" changelist="ad802f51-606e-4ac4-83c0-54a0cda202ed" time="1380420828136" ignored="false" />
     <file path="/DefaultControllerTest.php" changelist="ad802f51-606e-4ac4-83c0-54a0cda202ed" time="1380395814437" ignored="false" />
     <file path="/LoadUserData.php" changelist="ad802f51-606e-4ac4-83c0-54a0cda202ed" time="1380403733793" ignored="false" />
     <file path="/a.dummy" changelist="ad802f51-606e-4ac4-83c0-54a0cda202ed" time="1380401869096" ignored="false" />
@@ -29,14 +30,15 @@
     <file path="/LoadCampaignData.php" changelist="ad802f51-606e-4ac4-83c0-54a0cda202ed" time="1380419890136" ignored="false" />
     <file path="/LoadCommentData.php" changelist="ad802f51-606e-4ac4-83c0-54a0cda202ed" time="1380404086521" ignored="false" />
     <file path="/LoadCoinGiftData.php" changelist="ad802f51-606e-4ac4-83c0-54a0cda202ed" time="1380404874845" ignored="false" />
-    <file path="/DefaultController.php" changelist="ad802f51-606e-4ac4-83c0-54a0cda202ed" time="1380419761364" ignored="false" />
+    <file path="/DefaultController.php" changelist="ad802f51-606e-4ac4-83c0-54a0cda202ed" time="1380420842000" ignored="false" />
     <file path="/NotificationMethod.php" changelist="ad802f51-606e-4ac4-83c0-54a0cda202ed" time="1380408617700" ignored="false" />
     <file path="/LoadNotificationMethodData.php" changelist="ad802f51-606e-4ac4-83c0-54a0cda202ed" time="1380406882619" ignored="false" />
     <file path="/ShareOnNetwork.php" changelist="ad802f51-606e-4ac4-83c0-54a0cda202ed" time="1380409139304" ignored="false" />
     <file path="/LoadShareOnNetworkData.php" changelist="ad802f51-606e-4ac4-83c0-54a0cda202ed" time="1380407257978" ignored="false" />
     <file path="/createForm.html.twig" changelist="ad802f51-606e-4ac4-83c0-54a0cda202ed" time="1380409415075" ignored="false" />
-    <file path="/index.html.twig" changelist="ad802f51-606e-4ac4-83c0-54a0cda202ed" time="1380417475108" ignored="false" />
+    <file path="/index.html.twig" changelist="ad802f51-606e-4ac4-83c0-54a0cda202ed" time="1380420975764" ignored="false" />
     <file path="/trending.html.twig" changelist="ad802f51-606e-4ac4-83c0-54a0cda202ed" time="1380419827317" ignored="false" />
+    <file path="/popular.html.twig" changelist="ad802f51-606e-4ac4-83c0-54a0cda202ed" time="1380420941693" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +61,7 @@
       <file leaf-file-name="routing.yml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Cympel/Bundle/CoinGiftBundle/Resources/config/routing.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="17" selection-start="504" selection-end="504" vertical-scroll-proportion="0.0">
+            <state line="17" column="66" selection-start="661" selection-end="661" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -77,7 +79,16 @@
       <file leaf-file-name="index.html.twig" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Cympel/Bundle/CoinGiftBundle/Resources/views/Default/index.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="0" selection-start="1052" selection-end="1052" vertical-scroll-proportion="0.6201117">
+            <state line="76" column="58" selection-start="1884" selection-end="1884" vertical-scroll-proportion="0.18435754">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="popular.html.twig" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Cympel/Bundle/CoinGiftBundle/Resources/views/Default/popular.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="54" column="10" selection-start="1911" selection-end="1911" vertical-scroll-proportion="-33.75">
               <folding />
             </state>
           </provider>
@@ -86,7 +97,7 @@
       <file leaf-file-name="trending.html.twig" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Cympel/Bundle/CoinGiftBundle/Resources/views/Default/trending.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="0" selection-start="590" selection-end="590" vertical-scroll-proportion="-9.375">
+            <state line="30" column="12" selection-start="1037" selection-end="1076" vertical-scroll-proportion="-18.75">
               <folding />
             </state>
           </provider>
@@ -104,7 +115,7 @@
       <file leaf-file-name="DefaultController.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Cympel/Bundle/CoinGiftBundle/Controller/DefaultController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="79" column="54" selection-start="2733" selection-end="2733" vertical-scroll-proportion="-35.333332">
+            <state line="96" column="66" selection-start="3321" selection-end="3321" vertical-scroll-proportion="-30.333334">
               <folding />
             </state>
           </provider>
@@ -128,7 +139,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/Cympel/Bundle/CoinGiftBundle/DataFixtures/ORM/LoadVoteData.php" />
         <option value="$PROJECT_DIR$/src/Cympel/Bundle/CoinGiftBundle/Entity/Comment.php" />
         <option value="$PROJECT_DIR$/src/Cympel/Bundle/CoinGiftBundle/Entity/Vote.php" />
         <option value="$PROJECT_DIR$/src/Cympel/Bundle/CoinGiftBundle/DataFixtures/ORM/LoadCoinGiftData.php" />
@@ -139,10 +149,11 @@
         <option value="$PROJECT_DIR$/src/Cympel/Bundle/CoinGiftBundle/Entity/NotificationMethod.php" />
         <option value="$PROJECT_DIR$/src/Cympel/Bundle/CoinGiftBundle/Entity/Campaign.php" />
         <option value="$PROJECT_DIR$/src/Cympel/Bundle/CoinGiftBundle/Entity/ShareOnNetwork.php" />
-        <option value="$PROJECT_DIR$/src/Cympel/Bundle/CoinGiftBundle/Resources/config/routing.yml" />
-        <option value="$PROJECT_DIR$/src/Cympel/Bundle/CoinGiftBundle/Controller/DefaultController.php" />
         <option value="$PROJECT_DIR$/src/Cympel/Bundle/CoinGiftBundle/Resources/views/Default/trending.html.twig" />
         <option value="$PROJECT_DIR$/src/Cympel/Bundle/CoinGiftBundle/DataFixtures/ORM/LoadCampaignData.php" />
+        <option value="$PROJECT_DIR$/src/Cympel/Bundle/CoinGiftBundle/Resources/config/routing.yml" />
+        <option value="$PROJECT_DIR$/src/Cympel/Bundle/CoinGiftBundle/Controller/DefaultController.php" />
+        <option value="$PROJECT_DIR$/src/Cympel/Bundle/CoinGiftBundle/Resources/views/Default/popular.html.twig" />
         <option value="$PROJECT_DIR$/src/Cympel/Bundle/CoinGiftBundle/Resources/views/Default/index.html.twig" />
       </list>
     </option>
@@ -621,11 +632,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Cympel/Bundle/CoinGiftBundle/DataFixtures/ORM/LoadCoinGiftData.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="49" selection-start="978" selection-end="978" vertical-scroll-proportion="-18.75" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Cympel/Bundle/CoinGiftBundle/Entity/Vote.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="29" column="5" selection-start="636" selection-end="674" vertical-scroll-proportion="-18.125" />
@@ -679,9 +685,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Cympel/Bundle/CoinGiftBundle/Resources/config/routing.yml">
+    <entry file="file://$PROJECT_DIR$/src/Cympel/Bundle/CoinGiftBundle/DataFixtures/ORM/LoadCampaignData.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="17" selection-start="504" selection-end="504" vertical-scroll-proportion="0.0">
+        <state line="80" column="57" selection-start="3303" selection-end="3303" vertical-scroll-proportion="-31.875">
           <folding />
         </state>
       </provider>
@@ -693,30 +699,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Cympel/Bundle/CoinGiftBundle/Controller/DefaultController.php">
+    <entry file="file://$PROJECT_DIR$/src/Cympel/Bundle/CoinGiftBundle/Resources/config/routing.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="79" column="54" selection-start="2733" selection-end="2733" vertical-scroll-proportion="-35.333332">
+        <state line="17" column="66" selection-start="661" selection-end="661" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Cympel/Bundle/CoinGiftBundle/DataFixtures/ORM/LoadCampaignData.php">
+    <entry file="file://$PROJECT_DIR$/src/Cympel/Bundle/CoinGiftBundle/Controller/DefaultController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="80" column="57" selection-start="3303" selection-end="3303" vertical-scroll-proportion="-31.875">
+        <state line="96" column="66" selection-start="3321" selection-end="3321" vertical-scroll-proportion="-30.333334">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Cympel/Bundle/CoinGiftBundle/Resources/views/Default/trending.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="0" selection-start="590" selection-end="590" vertical-scroll-proportion="-9.375">
+        <state line="30" column="12" selection-start="1037" selection-end="1076" vertical-scroll-proportion="-18.75">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Cympel/Bundle/CoinGiftBundle/Resources/views/Default/popular.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="54" column="10" selection-start="1911" selection-end="1911" vertical-scroll-proportion="-33.75">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Cympel/Bundle/CoinGiftBundle/Resources/views/Default/index.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="0" selection-start="1052" selection-end="1052" vertical-scroll-proportion="0.6201117">
+        <state line="76" column="58" selection-start="1884" selection-end="1884" vertical-scroll-proportion="0.18435754">
           <folding />
         </state>
       </provider>

@@ -72,13 +72,13 @@ class Campaign implements iType
 
     /**
      * @var \Doctrine\Common\Collections\ArrayCollection
-     * @ORM\OneToMany(targetEntity="NotificationMethod", mappedBy="campaign")
+     * @ORM\OneToMany(targetEntity="NotificationMethod", mappedBy="campaign", cascade={"persist"})
      */
     protected $notificationMethods;
 
     /**
      * @var \Doctrine\Common\Collections\ArrayCollection
-     * @ORM\OneToMany(targetEntity="ShareOnNetwork", mappedBy="campaign")
+     * @ORM\OneToMany(targetEntity="ShareOnNetwork", mappedBy="campaign", cascade={"persist"})
      */
     protected $shareOnNetworks;
 
@@ -199,7 +199,13 @@ class Campaign implements iType
      */
     public function setNotificationMethods($notificationMethods)
     {
-        $this->notificationMethods = $notificationMethods;
+        $foo = array();
+        foreach($notificationMethods as $key => $value) {
+            $foo[$key] = new NotificationMethod();
+            $foo[$key]->setCampaign($this);
+            $foo[$key]->setNotificationType($value);
+        }
+        $this->notificationMethods = new ArrayCollection($foo);
     }
 
     /**
@@ -215,7 +221,13 @@ class Campaign implements iType
      */
     public function setShareOnNetworks($shareOnNetworks)
     {
-        $this->shareOnNetworks = $shareOnNetworks;
+        $bar = array();
+        foreach($shareOnNetworks as $key => $value) {
+            $bar[$key] = new ShareOnNetwork();
+            $bar[$key]->setCampaign($this);
+            $bar[$key]->setNetworkName($value);
+        }
+        $this->shareOnNetworks = new ArrayCollection($bar);
     }
 
     /**

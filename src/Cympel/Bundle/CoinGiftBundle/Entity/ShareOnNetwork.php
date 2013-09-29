@@ -48,7 +48,7 @@ class ShareOnNetwork implements iType
 
     /**
      * @var Campaign
-     * @ORM\ManyToOne(targetEntity="Campaign", inversedBy="shareOnNetworks")
+     * @ORM\ManyToOne(targetEntity="Campaign", inversedBy="shareOnNetworks", cascade={"persist"})
      * @ORM\JoinColumn(name="campaign_id", referencedColumnName="id")
      */
     protected $campaign;

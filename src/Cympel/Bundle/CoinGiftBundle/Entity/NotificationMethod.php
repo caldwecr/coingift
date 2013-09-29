@@ -31,14 +31,14 @@ class NotificationMethod implements iType
 
     /**
      * @var Campaign
-     * @ORM\ManyToOne(targetEntity="Campaign", inversedBy="notificationMethods")
+     * @ORM\ManyToOne(targetEntity="Campaign", inversedBy="notificationMethods", cascade={"persist"})
      * @ORM\JoinColumn(name="campaign_id", referencedColumnName="id")
      */
     protected $campaign;
 
     /**
      * @var string
-     * @ORM\Column(type="string", length=10)
+     * @ORM\Column(type="string", length=20)
      *
      * Currently supported options: 'E-mail' and 'Text Message'
      */

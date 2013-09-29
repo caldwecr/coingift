@@ -53,6 +53,9 @@ class DefaultController extends Controller
             ->add('headlineImageUri', 'text', array(
                 'label' => 'Image URL For Your Campaign:',
             ))
+            ->add('summary', 'textarea', array(
+                'label' => 'Idea Summary:',
+            ))
             ->add('idea', 'textarea', array(
                 'label' => 'Write Your Idea:',
             ))

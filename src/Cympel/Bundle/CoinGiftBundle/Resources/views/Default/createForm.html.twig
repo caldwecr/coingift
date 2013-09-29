@@ -23,6 +23,11 @@
             {{ form_widget(form.headlineImageUri) }}
         </div>
         <div class="submit-q">
+            {{ form_label(form.summary) }}
+            {{ form_errors(form.summary) }}
+            {{ form_widget(form.summary) }}
+        </div>
+        <div class="submit-q">
             {{ form_label(form.idea) }}
             {{ form_errors(form.idea) }}
             {{ form_widget(form.idea) }}

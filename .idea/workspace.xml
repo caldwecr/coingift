@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ad802f51-606e-4ac4-83c0-54a0cda202ed" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Cympel/Bundle/CoinGiftBundle/Resources/views/Default/trending.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Cympel/Bundle/CoinGiftBundle/Controller/DefaultController.php" afterPath="$PROJECT_DIR$/src/Cympel/Bundle/CoinGiftBundle/Controller/DefaultController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Cympel/Bundle/CoinGiftBundle/DataFixtures/ORM/LoadCampaignData.php" afterPath="$PROJECT_DIR$/src/Cympel/Bundle/CoinGiftBundle/DataFixtures/ORM/LoadCampaignData.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Cympel/Bundle/CoinGiftBundle/Resources/views/Default/create.html.twig" afterPath="$PROJECT_DIR$/src/Cympel/Bundle/CoinGiftBundle/Resources/views/Default/create.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Cympel/Bundle/CoinGiftBundle/Resources/views/Default/index.html.twig" afterPath="$PROJECT_DIR$/src/Cympel/Bundle/CoinGiftBundle/Resources/views/Default/index.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Cympel/Bundle/CoinGiftBundle/Resources/config/routing.yml" afterPath="$PROJECT_DIR$/src/Cympel/Bundle/CoinGiftBundle/Resources/config/routing.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/stuff/css/main.css" afterPath="$PROJECT_DIR$/web/stuff/css/main.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/stuff/scss/main.scss" afterPath="$PROJECT_DIR$/web/stuff/scss/main.scss" />
     </list>
     <ignored path="coingift.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -76,19 +74,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html.twig" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.html.twig" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Cympel/Bundle/CoinGiftBundle/Resources/views/Default/index.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="54" column="61" selection-start="1267" selection-end="1267" vertical-scroll-proportion="-29.791666">
+            <state line="37" column="0" selection-start="1052" selection-end="1052" vertical-scroll-proportion="0.6201117">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="trending.html.twig" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="trending.html.twig" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Cympel/Bundle/CoinGiftBundle/Resources/views/Default/trending.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="14" selection-start="799" selection-end="799" vertical-scroll-proportion="0.3469163">
+            <state line="15" column="0" selection-start="590" selection-end="590" vertical-scroll-proportion="-9.375">
               <folding />
             </state>
           </provider>
@@ -141,11 +139,11 @@
         <option value="$PROJECT_DIR$/src/Cympel/Bundle/CoinGiftBundle/Entity/NotificationMethod.php" />
         <option value="$PROJECT_DIR$/src/Cympel/Bundle/CoinGiftBundle/Entity/Campaign.php" />
         <option value="$PROJECT_DIR$/src/Cympel/Bundle/CoinGiftBundle/Entity/ShareOnNetwork.php" />
-        <option value="$PROJECT_DIR$/src/Cympel/Bundle/CoinGiftBundle/Resources/views/Default/index.html.twig" />
         <option value="$PROJECT_DIR$/src/Cympel/Bundle/CoinGiftBundle/Resources/config/routing.yml" />
         <option value="$PROJECT_DIR$/src/Cympel/Bundle/CoinGiftBundle/Controller/DefaultController.php" />
         <option value="$PROJECT_DIR$/src/Cympel/Bundle/CoinGiftBundle/Resources/views/Default/trending.html.twig" />
         <option value="$PROJECT_DIR$/src/Cympel/Bundle/CoinGiftBundle/DataFixtures/ORM/LoadCampaignData.php" />
+        <option value="$PROJECT_DIR$/src/Cympel/Bundle/CoinGiftBundle/Resources/views/Default/index.html.twig" />
       </list>
     </option>
   </component>
@@ -709,16 +707,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Cympel/Bundle/CoinGiftBundle/Resources/views/Default/index.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/Cympel/Bundle/CoinGiftBundle/Resources/views/Default/trending.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="61" selection-start="1267" selection-end="1267" vertical-scroll-proportion="-29.791666">
+        <state line="15" column="0" selection-start="590" selection-end="590" vertical-scroll-proportion="-9.375">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Cympel/Bundle/CoinGiftBundle/Resources/views/Default/trending.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/Cympel/Bundle/CoinGiftBundle/Resources/views/Default/index.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="14" selection-start="799" selection-end="799" vertical-scroll-proportion="0.3469163">
+        <state line="37" column="0" selection-start="1052" selection-end="1052" vertical-scroll-proportion="0.6201117">
           <folding />
         </state>
       </provider>

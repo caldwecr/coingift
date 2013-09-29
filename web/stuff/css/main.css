@@ -4774,6 +4774,43 @@ ul.main-nav {
   padding: 30px 0 0 0; }
   .billboard .stats-n-cta {
     background-color: rgba(255, 255, 255, 0.85); }
+    .billboard .stats-n-cta h1 {
+      text-transform: uppercase;
+      font-weight: bold;
+      color: #27889f;
+      margin: 20px 0 0 0;
+      line-height: 50px; }
+    .billboard .stats-n-cta .subheader {
+      margin: 5px 0 0 0;
+      text-transform: uppercase;
+      font-weight: bold; }
+    .billboard .stats-n-cta .box {
+      float: left;
+      margin: 15px 37px; }
+      .billboard .stats-n-cta .box p {
+        margin: 0 0 5px 0;
+        font-size: 12px;
+        color: #929083;
+        font-weight: normal; }
+      .billboard .stats-n-cta .box h2 {
+        letter-spacing: -1px;
+        margin: 0;
+        line-height: 40px;
+        font-weight: bold;
+        font-size: 45px;
+        font-family: HelveticaNeue, Helvetica, arial;
+        color: #929083; }
+    .billboard .stats-n-cta .cta {
+      clear: both;
+      width: 40%;
+      margin: 0 auto; }
+      .billboard .stats-n-cta .cta .button {
+        background-color: #929083;
+        box-shadow: none;
+        border: none;
+        color: #fff;
+        border: 1px solid #89877d;
+        width: 100%; }
 
 .stats-number {
   background-color: #ebebeb;
@@ -4797,6 +4834,17 @@ ul.main-nav {
 /* ==========================================================================
    Create Page
    ========================================================================== */
+.media-buttons {
+  margin: 20px 0 20px 0;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  padding-top: 10px;
+  padding-bottom: 20px; }
+  .media-buttons p {
+    margin: 0 0 10px 0; }
+  .media-buttons .button {
+    margin: 0; }
+
 textarea {
   height: 250px; }
 
@@ -4808,3 +4856,14 @@ textarea {
   font-size: 1em; }
 .faq p {
   font-size: .75em; }
+
+/* Nicolas Gallagher's micro clearfix */
+.group {
+  *zoom: 1; }
+
+.group:before, .group:after {
+  content: " ";
+  display: table; }
+
+.group:after {
+  clear: both; }

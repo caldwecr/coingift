@@ -4,7 +4,7 @@
         <div class="row">
             {% for campaign in firstFourCampaigns %}
             <div class="large-3 small-6 columns">
-                <img src="http://placehold.it/250x250&text=Thumbnail" />
+                <img src="{{ campaign.headlineImageUri }}" />
                 <h6 class="panel">{{ campaign.id }}</h6>
             </div>
             {% endfor %}
@@ -30,7 +30,7 @@
 
             {% for campaign in nextFourCampaigns %}
             <div class="large-3 small-6 columns">
-                <img src="http://placehold.it/250x250&text=Thumbnail" />
+                <img src="{{ campaign.headlineImageUri }}" />
                 <h6 class="panel">{{ campaign.id }}</h6>
             </div>
             {% endfor %}

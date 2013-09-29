@@ -1,42 +1,58 @@
 {{ form_start(form) }}
     {{ form_errors(form) }}
+    <div class="large-12 small-12 columns">
 
-    <div>
-        {{ form_label(form.id) }}
-        {{ form_errors(form.id) }}
-        {{ form_widget(form.id) }}
+        <div class="media-buttons">
+            <h6>Submit a video or picture for your idea.</h6>
+            <a href="#" class="medium button secondary">Video</a>
+            <a href="#" class="medium button secondary">Picture</a>
+            <a href="#" class="medium button secondary">Take a Picture</a>
+        </div>
+
     </div>
 
-    <div>
-        {{ form_label(form.idea) }}
-        {{ form_errors(form.idea) }}
-        {{ form_widget(form.idea) }}
-    </div>
+    <div class="large-8 small-12 columns">
+        <div class="submit-q">
+            {{ form_label(form.id) }}
+            {{ form_errors(form.id) }}
+            {{ form_widget(form.id) }}
+        </div>
+        <div class="submit-q">
+            {{ form_label(form.headlineImageUri) }}
+            {{ form_errors(form.headlineImageUri) }}
+            {{ form_widget(form.headlineImageUri) }}
+        </div>
+        <div class="submit-q">
+            {{ form_label(form.idea) }}
+            {{ form_errors(form.idea) }}
+            {{ form_widget(form.idea) }}
+        </div>
 
-    <div>
-        {{ form_label(form.inspiration) }}
-        {{ form_errors(form.inspiration) }}
-        {{ form_widget(form.inspiration) }}
-    </div>
+        <div class="submit-q">
+            {{ form_label(form.inspiration) }}
+            {{ form_errors(form.inspiration) }}
+            {{ form_widget(form.inspiration) }}
+        </div>
 
-    <div>
-        {{ form_label(form.benefitsImpact) }}
-        {{ form_errors(form.benefitsImpact) }}
-        {{ form_widget(form.benefitsImpact) }}
-    </div>
+        <div class="submit-q">
+            {{ form_label(form.benefitsImpact) }}
+            {{ form_errors(form.benefitsImpact) }}
+            {{ form_widget(form.benefitsImpact) }}
+        </div>
 
-    <div>
-        {{ form_label(form.notificationMethods) }}
-        {{ form_errors(form.notificationMethods) }}
-        {{ form_widget(form.notificationMethods) }}
-    </div>
+        <div class="coinGiftCheck">
+            {{ form_label(form.notificationMethods) }}
+            {{ form_errors(form.notificationMethods) }}
+            {{ form_widget(form.notificationMethods) }}
+        </div>
 
-    <div>
-        {{ form_label(form.shareOnNetworks) }}
-        {{ form_errors(form.shareOnNetworks) }}
-        {{ form_widget(form.shareOnNetworks) }}
-    </div>
+        <div class="coinGiftCheck">
+            {{ form_label(form.shareOnNetworks) }}
+            {{ form_errors(form.shareOnNetworks) }}
+            {{ form_widget(form.shareOnNetworks) }}
+        </div>
 
-<input type="submit" />
-
+        <input type="submit" class="medium button expand" />
+    </div>  {# end large-8 #}
 {{ form_end(form) }}
+

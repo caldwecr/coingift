@@ -15,8 +15,11 @@ class DefaultController extends Controller
         return $this->render('CympelCoinGiftBundle:Default:index.html.twig');
     }
 
-    public function createAction()
+    public function createAction(Request $request)
     {
+        if($request->getMethod() === 'POST') {
+            return $this->forward('CympelCoinGiftBundle:Default:createForm');
+        }
         return $this->render('CympelCoinGiftBundle:Default:create.html.twig');
     }
 
@@ -32,17 +35,30 @@ class DefaultController extends Controller
         $campaign = new Campaign();
 
         $form = $this->createFormBuilder($campaign)
-            ->add('id', 'text')
-            ->add('idea', 'text')
-            ->add('inspiration', 'text')
-            ->add('benefitsImpact', 'text')
+            ->add('id', 'text', array(
+                'label' => 'Please name this campaign',
+            ))
+            ->add('headlineImageUri', 'text', array(
+                'label' => 'Enter the Uri of the headline image for your campaign',
+            ))
+            ->add('idea', 'textarea', array(
+                'label' => 'Write your idea',
+            ))
+            ->add('inspiration', 'textarea', array(
+                'label' => 'What inspiration have you had to develop this idea?',
+            ))
+            ->add('benefitsImpact', 'textarea', array(
+                'label' => 'What benefits/impact will this idea to the community?',
+            ))
             ->add('notificationMethods', 'choice', array(
                 'choices' => NotificationMethod::getNotificationMethodChoices(),
                 'multiple' => true,
+                'expanded' => true,
             ))
             ->add('shareOnNetworks', 'choice', array(
                 'choices' => ShareOnNetwork::getShareOnNetworkChoices(),
                 'multiple' => true,
+                'expanded' => true,
             ))
             ->getForm();
 

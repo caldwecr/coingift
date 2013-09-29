@@ -27,6 +27,7 @@ class LoadCampaignData extends AbstractFixture implements OrderedFixtureInterfac
         $campaign->setBenefitsImpact("it will do great things");
         $campaign->setIdea("my idea is to fly to the moon");
         $campaign->setInspiration("my inspiration is nasa");
+        $campaign->setHeadlineImageUri("/stuff/images/thumb-1.jpg");
         $manager->persist($campaign);
 
         $campaign2 = new Campaign();
@@ -35,6 +36,7 @@ class LoadCampaignData extends AbstractFixture implements OrderedFixtureInterfac
         $campaign2->setBenefitsImpact("it will do great things");
         $campaign2->setIdea("my idea is to fly to the moon23r");
         $campaign2->setInspiration("my inspiration is nasafwefw");
+        $campaign2->setHeadlineImageUri("/stuff/images/thumb-2.jpg");
         $manager->persist($campaign2);
 
         $campaign3 = new Campaign();
@@ -43,6 +45,7 @@ class LoadCampaignData extends AbstractFixture implements OrderedFixtureInterfac
         $campaign3->setBenefitsImpact("it will do great thingsalso");
         $campaign3->setIdea("my idea is to fly to the moon");
         $campaign3->setInspiration("my inspiration is nasa");
+        $campaign3->setHeadlineImageUri("/stuff/images/thumb-3.jpg");
         $manager->persist($campaign3);
 
         $campaign4 = new Campaign();
@@ -51,6 +54,7 @@ class LoadCampaignData extends AbstractFixture implements OrderedFixtureInterfac
         $campaign4->setBenefitsImpact("it will do great things4");
         $campaign4->setIdea("my idea is to fly to the moon");
         $campaign4->setInspiration("my inspiration is nasa");
+        $campaign4->setHeadlineImageUri("http://placehold.it/250x250&text=Thumbnail");
         $manager->persist($campaign4);
 
         $campaign5 = new Campaign();
@@ -59,6 +63,7 @@ class LoadCampaignData extends AbstractFixture implements OrderedFixtureInterfac
         $campaign5->setBenefitsImpact("it will do great things");
         $campaign5->setIdea("my idea is to fly to the moon");
         $campaign5->setInspiration("my inspiration is nasa");
+        $campaign5->setHeadlineImageUri("/stuff/images/thumb-1.jpg");
         $manager->persist($campaign5);
 
         $campaign6 = new Campaign();
@@ -67,6 +72,7 @@ class LoadCampaignData extends AbstractFixture implements OrderedFixtureInterfac
         $campaign6->setBenefitsImpact("it will do great things");
         $campaign6->setIdea("my idea is to fly to the moon");
         $campaign6->setInspiration("my inspiration is nasa");
+        $campaign6->setHeadlineImageUri("/stuff/images/thumb-2.jpg");
         $manager->persist($campaign6);
 
         $campaign7 = new Campaign();
@@ -75,6 +81,7 @@ class LoadCampaignData extends AbstractFixture implements OrderedFixtureInterfac
         $campaign7->setBenefitsImpact("it will do great things");
         $campaign7->setIdea("my idea is to fly to the moon");
         $campaign7->setInspiration("my inspiration is nasa");
+        $campaign7->setHeadlineImageUri("/stuff/images/thumb-3.jpg");
         $manager->persist($campaign7);
 
         $campaign8 = new Campaign();
@@ -83,6 +90,7 @@ class LoadCampaignData extends AbstractFixture implements OrderedFixtureInterfac
         $campaign8->setBenefitsImpact("it will do great things");
         $campaign8->setIdea("my idea is to fly to the moon");
         $campaign8->setInspiration("my inspiration is nasa");
+        $campaign8->setHeadlineImageUri("http://placehold.it/250x250&text=Thumbnail");
         $manager->persist($campaign8);
 
         $manager->flush();

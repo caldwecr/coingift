@@ -32,7 +32,7 @@ $(function() {
             console.log('error');
         });
     });
-    $('div.commentOnComment').click(function(){
+    $('.commentOnComment').click(function(){
         console.log('commentOnComment clicked');
         var parentCommentId = $(this).parents('div.comment').find('.commentId').val();
         var request = $.ajax({

@@ -21,14 +21,14 @@
 					<img src="{{ campaign.headlineImageUri }}" />
 				</div>
 			
-				<div class="large-4 small-3 columns cmpgn">
+				<div class="large-4 small-12 columns cmpgn">
 					<h6>Summary</h6>
 					<p>
                         {{ campaign.summary }}
 					</p>
 				</div>
 			
-				<div class="large-5 small-3 columns cmpgn donate-panel group">
+				<div class="large-5 small-12 columns cmpgn donate-panel group">
 					<div class="box">
 		              <p class="subheader">Amount funded</p>
 		              <h1>${{ campaign.coinTotal|number_format(2, '.', ',') }}</h1>

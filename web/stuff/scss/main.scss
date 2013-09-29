@@ -134,7 +134,7 @@ ul.main-nav {
 		color: #8a8a8a;
 		span {
 			font-size: 40px;
-			color: #8a8a8a;
+			color: #3C813F;
 			font-weight: bold;
 			margin: 0 .25em 0 0;
 			padding: 0;
@@ -144,6 +144,19 @@ ul.main-nav {
 			top: 10px;
 			letter-spacing: -2px;
 		}
+	}
+}
+
+.cmpgn-hotness {
+	color: #27889F!important;
+}
+h6.panel {
+	color: #4c5b52;	
+}
+
+.contact-widget {
+	a:link {
+		color: #fff!important;
 	}
 }
 
@@ -172,7 +185,7 @@ ul.main-nav {
 }
 .media-buttons {		
 	margin: 20px 0 20px 0;	
-	padding-top: 10px;
+	//padding-top: 10px;
 	padding-bottom: 30px;
 	border-bottom: 1px solid #ddd;	
 	h4 {
@@ -324,7 +337,7 @@ textarea {
 		p {margin: 0 0 .25em 0;}
 	}
 	.commentAuthor {
-		color: #999;
+		color: #0073ae;
 		display: block;
 		margin: 0 0 .25em 0;
 	}

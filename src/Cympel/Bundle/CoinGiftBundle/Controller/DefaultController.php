@@ -25,8 +25,15 @@ class DefaultController extends Controller
 
     public function campaignAction($campaignName)
     {
+        $campaign = $this->getDoctrine()
+            ->getRepository('CympelCoinGiftBundle:Campaign')
+            ->find($campaignName);
+
+        if(!$campaign) {
+            return $this->redirect($this->generateUrl('coinGiftHome'));
+        }
         return $this->render('CympelCoinGiftBundle:Default:campaign.html.twig', array(
-            'campaignName' => $campaignName,
+            'campaign' => $campaign,
         ));
     }
 

@@ -3,54 +3,25 @@
         <h4>Most Popular</h4>
         <div class="row">
             {% for campaign in firstFourCampaigns %}
-            <div class="large-3 small-6 columns">
-                <img src="{{ campaign.headlineImageUri }}" />
-                <h6 class="panel">{{ campaign.id }}</h6>
-            </div>
+            <a href="{{ path('coinGiftCampaign', {'campaignName': campaign.id}) }}">
+                <div class="large-3 small-6 columns">
+                    <img src="{{ campaign.headlineImageUri }}" />
+                    <h6 class="panel">{{ campaign.id }}</h6>
+                </div>
+            </a>
             {% endfor %}
-<!--
-            <div class="large-3 small-6 columns">
-                <img src="http://placehold.it/250x250&text=Thumbnail" />
-                <h6 class="panel">Description</h6>
-            </div>
 
-            <div class="large-3 small-6 columns">
-                <img src="http://placehold.it/250x250&text=Thumbnail" />
-                <h6 class="panel">Description</h6>
-            </div>
-
-            <div class="large-3 small-6 columns">
-                <img src="http://placehold.it/250x250&text=Thumbnail" />
-                <h6 class="panel">Description</h6>
-            </div>
--->
         </div>
 
         <div class="row">
             {% for campaign in nextFourCampaigns %}
-            <div class="large-3 small-6 columns">
-                <img src="{{ campaign.headlineImageUri }}" />
-                <h6 class="panel">{{ campaign.id }}</h6>
-            </div>
+            <a href="{{ path('coinGiftCampaign', {'campaignName': campaign.id}) }}">
+                <div class="large-3 small-6 columns">
+                    <img src="{{ campaign.headlineImageUri }}" />
+                    <h6 class="panel">{{ campaign.id }}</h6>
+                </div>
+            </a>
             {% endfor %}
-<!--
-            <div class="large-3 small-6 columns">
-                <img src="http://placehold.it/250x250&text=Thumbnail" />
-                <h6 class="panel">Description</h6>
-            </div>
-
-            <div class="large-3 small-6 columns">
-                <img src="http://placehold.it/250x250&text=Thumbnail" />
-                <h6 class="panel">Description</h6>
-            </div>
-
-            <div class="large-3 small-6 columns">
-                <img src="http://placehold.it/250x250&text=Thumbnail" />
-                <h6 class="panel">Description</h6>
-            </div>
--->
         </div>
-
-
     </div>
 </div>

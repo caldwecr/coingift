@@ -47,19 +47,19 @@ class DefaultController extends Controller
 
         $form = $this->createFormBuilder($campaign)
             ->add('id', 'text', array(
-                'label' => 'Please name this campaign',
+                'label' => 'Campaign Name:',
             ))
             ->add('headlineImageUri', 'text', array(
-                'label' => 'Enter the Uri of the headline image for your campaign',
+                'label' => 'Image URL For Your Campaign:',
             ))
             ->add('idea', 'textarea', array(
-                'label' => 'Write your idea',
+                'label' => 'Write Your Idea:',
             ))
             ->add('inspiration', 'textarea', array(
-                'label' => 'What inspiration have you had to develop this idea?',
+                'label' => 'What Was Your Inspiration Developing This Idea?',
             ))
             ->add('benefitsImpact', 'textarea', array(
-                'label' => 'What benefits/impact will this idea to the community?',
+                'label' => 'What Benefits/Impact Will This Idea To The Community?',
             ))
             ->add('notificationMethods', 'choice', array(
                 'choices' => NotificationMethod::getNotificationMethodChoices(),

@@ -4766,6 +4766,13 @@ ul.main-nav {
 .top-bar-section li a:not(.button) {
   background-color: #006f51; }
 
+.top-bar-section ul li > a {
+  font-size: 14px; }
+
+#has-money {
+  background: #006f51 url("/stuff/images/icon-user-dollar.png") no-repeat 0px 0px !important;
+  padding-left: 44px; }
+
 /* billboard */
 .billboard {
   background: url("/stuff/images/billboard-bg.jpg") repeat;
@@ -4801,6 +4808,8 @@ ul.main-nav {
         font-size: 45px;
         font-family: HelveticaNeue, Helvetica, arial;
         color: #929083; }
+    .billboard .stats-n-cta .box1 {
+      margin-right: 67px; }
     .billboard .stats-n-cta .cta {
       clear: both;
       width: 40%;
@@ -4841,20 +4850,37 @@ ul.main-nav {
   border-bottom: 1px solid #ddd;
   padding-top: 10px;
   padding-bottom: 20px; }
+  .media-buttons h5 {
+    color: #27889f; }
   .media-buttons p {
     margin: 0 0 10px 0; }
   .media-buttons .button {
     margin: 0; }
 
+.submit-q label {
+  font-size: 20px;
+  display: inline-block;
+  margin: .25em 0 .5em 0; }
+
 textarea {
   height: 250px; }
+
+.coinGiftCheck {
+  border-bottom: 1px solid #ddd;
+  padding: 1em 0; }
+  .coinGiftCheck input {
+    margin-right: .5em; }
+  .coinGiftCheck label {
+    display: inline-block;
+    margin-right: 1em; }
 
 /* Sidebar */
 .help-idea {
   margin-top: 17px; }
 
 .faq h5 {
-  font-size: 1em; }
+  font-size: 1em;
+  color: #27889f; }
 .faq p {
   font-size: .75em; }
 

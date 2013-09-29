@@ -26,15 +26,19 @@
 					<p>Large Subhead Text, Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec ullamcorper nulla non. Large Subhead Text, Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec ullamcorper nulla non. </p>
 				</div>
 			
-				<div class="large-4 small-3 columns cmpgn donate-panel">
+				<div class="large-4 small-3 columns cmpgn donate-panel group">
 					<div class="box">
-		              <p class="subheader">Amount funded</p>
+		              <p class="subheader">Funded</p>
 		              <h1>9,012</h1>
 		            </div>
 		            <div class="box">
-		              <p class="subheader">Number of Givers</p>
-		              <h2>9,012</h2>
+		              <p class="subheader">Givers</p>
+		              <h1>29</h1>
 		            </div>
+		            <div class="cta">
+		                <a href="#" class="button medium expand">Give To This Campaign</a>
+		            </div>
+		            <p class="exp"><strong>Good until:</strong> October 10, 2014</p>
 				</div>			
 
 			</div>
@@ -49,7 +53,7 @@
 
       	<div class="campaign-desc">
 
-			<h5>Campaign Description</h5>
+			<h4>Campaign Description</h4>
         	<p>Normal Paragraph, Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec ullamcorper nulla non metus auctor fringilla. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Normal Paragraph, Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec ullamcorper nulla non metus auctor fringilla. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. </p>
         	<p>Normal Paragraph, Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec ullamcorper nulla non metus auctor fringilla. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Normal Paragraph, Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec ullamcorper nulla non metus auctor fringilla. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. </p>
         	<p>Normal Paragraph, Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec ullamcorper nulla non metus auctor fringilla. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Normal Paragraph, Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec ullamcorper nulla non metus auctor fringilla. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. </p>
@@ -97,29 +101,10 @@
 
 <!-- End trending this week -->
 
-    <!-- Footer -->
 
-  <footer class="row">
-    <div class="large-12 columns">
-      <hr>
-      <div class="row">
-        <div class="large-6 columns">
-          <p>&copy; Copyright no one at all. Go to town.</p>
-        </div>
-        <div class="large-6 columns">
-          <ul class="inline-list right">
-            <li><a href="#">Link 1</a></li>
-            <li><a href="#">Link 2</a></li>
-            <li><a href="#">Link 3</a></li>
-            <li><a href="#">Link 4</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </footer>
-  
+{{ include('CympelCoinGiftBundle:Default:footer.html.twig')}}
 
-	{{ include('CympelCoinGiftBundle:Default:scripts.html.twig')}}
+{{ include('CympelCoinGiftBundle:Default:scripts.html.twig')}}
 
 	</body>
 

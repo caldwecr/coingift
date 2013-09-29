@@ -4851,7 +4851,7 @@ textarea {
 
 /* Sidebar */
 .help-idea {
-  margin-top: 47px; }
+  margin-top: 17px; }
 
 .faq h5 {
   font-size: 1em; }
@@ -4873,14 +4873,40 @@ textarea {
   background-color: #F2F2F2;
   border: 1px solid #ddd; }
   .donate-panel .box {
-    margin: 0;
-    border: 1px solid #999; }
+    margin: 0 30px 0 0;
+    padding: 10px 0;
+    float: left; }
     .donate-panel .box h1, .donate-panel .box h2 {
       margin: 0;
       padding: 0;
-      line-height: 40px; }
+      line-height: 40px;
+      font-family: HelveticaNeue, Helvetica, arial;
+      letter-spacing: -2px;
+      color: #27889f; }
+    .donate-panel .box h1 {
+      font-size: 45px; }
+    .donate-panel .box h2 {
+      font-size: 40px; }
     .donate-panel .box .subheader {
-      margin: 0; }
+      margin: 0 0 5px 0;
+      text-transform: uppercase;
+      font-size: 12px;
+      line-height: 12px;
+      font-weight: bold;
+      color: #929292 !important; }
+  .donate-panel .exp {
+    font-size: 14px;
+    font-weight: normal;
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+    margin: 0 -15px;
+    padding: .25em 0 .25em 1em;
+    color: #727272; }
+  .donate-panel .cta .button {
+    color: #fff; }
+
+.campaign-desc {
+  padding: 20px 0 0 0; }
 
 /* Nicolas Gallagher's micro clearfix */
 .group {

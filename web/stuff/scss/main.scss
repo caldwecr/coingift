@@ -153,7 +153,7 @@ textarea {
 /* Sidebar */
 
 .help-idea {
-	margin-top: 47px;
+	margin-top: 17px;
 }
 .faq {
 	h5 {
@@ -183,18 +183,59 @@ textarea {
 	background-color: #F2F2F2;
 	border: 1px solid #ddd;
 	.box {
-		margin:0;
-		border: 1px solid #999;
+		margin:0 30px 0 0;		
+		padding: 10px 0;		
+		float: left;
 		h1, h2 {
 			margin: 0;
 			padding: 0;
 			line-height: 40px;
+			font-family: HelveticaNeue, Helvetica, arial;
+			letter-spacing: -2px;
+			color: #27889f;
+		}
+		h1 {
+			font-size: 45px;			
+		}
+		h2 {
+			font-size: 40px;
 		}
 		.subheader {
-			margin: 0;
+			margin: 0 0 5px 0;
+			text-transform: uppercase;
+			font-size: 12px;
+			line-height: 12px;
+			font-weight: bold;
+			color: #929292!important;
 		}
 	}
+	.exp {
+		font-size: 14px;
+		font-weight: normal;
+		background-color: #fff;
+		border-top: 1px solid #ddd;
+		margin: 0 -15px;
+		padding: .25em 0 .25em 1em;
+		color: #727272;
+	}
+	.cta {
+		.button {
+			color: #fff;
+		}
+	}
+
 }
+.campaign-desc {
+	padding: 20px 0 0 0;
+}
+
+
+
+
+
+
+
+
 /* Nicolas Gallagher's micro clearfix */
 .group { *zoom: 1; }
 .group:before, .group:after { content: " "; display: table; }

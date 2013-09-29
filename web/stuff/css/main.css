@@ -4908,6 +4908,68 @@ textarea {
 .campaign-desc {
   padding: 20px 0 0 0; }
 
+/* Reusable widgets */
+.profile {
+  margin-top: 16px; }
+
+.sidebarBoxOne {
+  background: none repeat scroll 0 0 #F2F2F2;
+  border-color: #D9D9D9;
+  border-style: solid;
+  border-width: 1px;
+  margin-bottom: 1.25em;
+  padding: 0 1em .25em 1em;
+  /* List inside sidebar box */ }
+  .sidebarBoxOne p {
+    margin-bottom: .5em;
+    font-size: 12px; }
+  .sidebarBoxOne .sidebarBoxTitle {
+    background-color: #fff;
+    font-size: 11px;
+    font-weight: bold;
+    border-bottom: 1px solid #d9d9d9;
+    font-family: Helvetica;
+    padding: .5em .25em .25em 1em;
+    color: #929292;
+    margin: 0 -16px;
+    text-transform: uppercase; }
+  .sidebarBoxOne a:link {
+    margin: 0;
+    padding: 0; }
+  .sidebarBoxOne .cmpgnCreator {
+    list-style: none;
+    padding: 1em 0 0 0;
+    margin: 0; }
+    .sidebarBoxOne .cmpgnCreator li {
+      list-style: none;
+      line-height: 16px;
+      margin: 0 0 0 90px; }
+    .sidebarBoxOne .cmpgnCreator li.picture {
+      float: left;
+      margin: 0 1em .5em 0;
+      height: 110px; }
+      .sidebarBoxOne .cmpgnCreator li.picture img {
+        border: 1px solid #999;
+        padding: 2px; }
+    .sidebarBoxOne .cmpgnCreator li.name h5 {
+      line-height: 16px; }
+  .sidebarBoxOne .giversList {
+    list-style: none;
+    padding: 1em 0 .5em 0;
+    margin: 0; }
+    .sidebarBoxOne .giversList li {
+      border-bottom: 1px solid #ddd;
+      padding: .5em 0; }
+      .sidebarBoxOne .giversList li p {
+        font-size: 14px;
+        margin: 0; }
+      .sidebarBoxOne .giversList li img {
+        position: relative;
+        display: inline-block;
+        margin: 0 .5em 0 0; }
+      .sidebarBoxOne .giversList li:first-child {
+        border-top: 1px solid #ddd; }
+
 /* Nicolas Gallagher's micro clearfix */
 .group {
   *zoom: 1; }

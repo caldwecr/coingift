@@ -20,44 +20,8 @@
         	<p>Normal Paragraph, Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec ullamcorper nulla non metus auctor fringilla. </p>
 
         	<h5>How much would you like to give?</h5>
+            {{ render(controller('CympelCoinGiftBundle:Default:giftForm', {'campaignName': campaignName})) }}
 
-        	<form>
-
-        		<div class="coins-amount">
-
-        			<ul>
-        				<li>        					        				
-        					<input type="radio" value="$1" class="field radio" name="#" id="#">
-        					<img src="/stuff/images/icon-1d-money.png" />
-        					<span>$1.00</span>	        				
-	        			</li>
-						<li>        					        				
-        					<input type="radio" value="$1" class="field radio" name="#" id="#">
-        					<img src="/stuff/images/icon-2d-money.png" />
-        					<span>$2.00</span>	
-	        			</li>	        			
-	        			<li>        					        				
-        					<input type="radio" value="$1" class="field radio" name="#" id="#">
-        					<img src="/stuff/images/icon-3d-money.png" />
-        					<span>$3.00</span>	
-	        			</li>
-	        			<li>        					        				
-        					<input type="radio" value="$1" class="field radio" name="#" id="#">
-        					<img src="/stuff/images/icon-4d-money.png" />
-        					<span>$4.00</span>	
-	        			</li>
-	        			<li>        					        				
-        					<input type="radio" value="$1" class="field radio" name="#" id="#">
-        					<img src="/stuff/images/icon-5d-money.png" />
-        					<span>$5.00</span>	
-	        			</li>
-        			</ul>
-        			<p><input type="Submit" value="Give Now" class="medium button expand" /></p>
-
-        		</div>
-
-
-        	</form>
 
         </div> {# end large-8 #}
 

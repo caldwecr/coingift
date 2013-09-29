@@ -2,6 +2,7 @@
 
 namespace Cympel\Bundle\CoinGiftBundle\Controller;
 
+use Cympel\Bundle\CoinGiftBundle\Entity\CoinGift;
 use Cympel\Bundle\CoinGiftBundle\Entity\Comment;
 use Cympel\Bundle\CoinGiftBundle\Entity\NotificationMethod;
 use Cympel\Bundle\CoinGiftBundle\Entity\ShareOnNetwork;
@@ -129,7 +130,58 @@ class DefaultController extends Controller
 
     public function giftAction($campaignName)
     {
-        return $this->render('CympelCoinGiftBundle:Default:gift.html.twig');
+        return $this->render('CympelCoinGiftBundle:Default:gift.html.twig', array(
+            'campaignName' => $campaignName,
+        ));
+    }
+
+    public function giftFormAction(Request $request, $campaignName)
+    {
+        $coinGift = new CoinGift();
+
+        $repository = $this->getDoctrine()
+            ->getRepository('CympelCoinGiftBundle:User');
+        $user = $repository->find("coolguy123");
+
+        $coinGift->setUser($user);
+
+        $repository = $this->getDoctrine()
+            ->getRepository('CympelCoinGiftBundle:Campaign');
+        $campaign = $repository->find($campaignName);
+
+        $coinGift->setCampaign($campaign);
+
+        $form = $this->createFormBuilder($coinGift)
+            ->setAction($this->generateUrl('coinGiftGiftForm', array(
+                'campaignName' => $campaignName,
+            )))
+            ->add('coinGiftValue', 'choice', array(
+                'choices' => array(
+                    '100' => "$1",
+                    '200' => "$2",
+                    '300' => "$3",
+                    '400' => "$4",
+                    '500' => "$5",
+                ),
+                'expanded' => true,
+                'multiple' => false,
+            ))
+            ->getForm();
+
+        $form->handleRequest($request);
+
+        if($form->isValid()) {
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($coinGift);
+            $em->flush();
+
+            return $this->redirect($this->generateUrl('coinGiftCampaign', array(
+                'campaignName' => $campaignName,
+            )));
+        }
+        return $this->render('CympelCoinGiftBundle:Default:giftForm.html.twig', array(
+            'form' => $form->createView(),
+        ));
     }
 
     public function commentsAction($campaignName)

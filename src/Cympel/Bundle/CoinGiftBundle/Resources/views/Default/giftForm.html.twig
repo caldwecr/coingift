@@ -1,0 +1,15 @@
+{{ form_start(form) }}
+    {{ form_errors(form) }}
+        <div class="coins-amount">
+
+            <ul>
+                <li>
+                    {{ form_label(form.coinGiftValue) }}
+                    {{ form_errors(form.coinGiftValue) }}
+                    {{ form_widget(form.coinGiftValue, {'attr': {'class': 'field radio'} }) }}
+                </li>
+            </ul>
+            <p><input type="Submit" value="Give Now" class="medium button expand" /></p>
+
+        </div>
+{{ form_end(form) }}

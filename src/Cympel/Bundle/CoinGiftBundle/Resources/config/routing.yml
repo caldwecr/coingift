@@ -19,6 +19,9 @@ coinGiftPopular:
 coinGiftGift:
     pattern: /gift/{campaignName}
     defaults: { _controller: CympelCoinGiftBundle:Default:gift }
+coinGiftGiftForm:
+    pattern: /gift/form/{campaignName}
+    defaults: { _controller: CympelCoinGiftBundle:Default:giftForm }
 coinGiftComments:
     pattern: /comments/{campaignName}
     defaults: { _controller: CympelCoinGiftBundle:Default:comments }

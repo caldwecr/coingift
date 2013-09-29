@@ -63,7 +63,7 @@ class DefaultController extends Controller
                 'label' => 'What Was Your Inspiration Developing This Idea?',
             ))
             ->add('benefitsImpact', 'textarea', array(
-                'label' => 'What Benefits/Impact Will This Idea To The Community?',
+                'label' => 'What Benefits/Impact Will This Have On The Community?',
             ))
             ->add('notificationMethods', 'choice', array(
                 'choices' => NotificationMethod::getNotificationMethodChoices(),

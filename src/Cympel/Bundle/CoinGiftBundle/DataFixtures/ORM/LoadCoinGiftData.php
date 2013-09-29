@@ -29,7 +29,7 @@ class LoadCoinGiftData extends AbstractFixture implements OrderedFixtureInterfac
         $coinGift->setCoinGiftValue(100);
         $manager->persist($coinGift);
         $coinGift2 = new CoinGift();
-        $coinGift2->setUser($this->getReference('user'));
+        $coinGift2->setUser($this->getReference('jesse'));
         $coinGift2->setCampaign($this->getReference('campaign'));
         $coinGift2->setCoinGiftValue(300);
         $manager->persist($coinGift2);
@@ -38,6 +38,16 @@ class LoadCoinGiftData extends AbstractFixture implements OrderedFixtureInterfac
         $coinGift3->setCampaign($this->getReference('campaign'));
         $coinGift3->setCoinGiftValue(200);
         $manager->persist($coinGift3);
+        $coinGift4 = new CoinGift();
+        $coinGift4->setUser($this->getReference('toni'));
+        $coinGift4->setCampaign($this->getReference('campaign'));
+        $coinGift4->setCoinGiftValue(100);
+        $manager->persist($coinGift4);
+        $coinGift5 = new CoinGift();
+        $coinGift5->setUser($this->getReference('danny'));
+        $coinGift5->setCampaign($this->getReference('campaign'));
+        $coinGift5->setCoinGiftValue(100);
+        $manager->persist($coinGift5);
         $manager->flush();
         $this->addReference('coinGift', $coinGift);
     }

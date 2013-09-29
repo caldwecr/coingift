@@ -340,6 +340,7 @@ class DefaultController extends Controller
                 'campaign' => $campaignName,
             )
         );
+
         return $this->render('CympelCoinGiftBundle:Default:gifters.html.twig', array(
             'coinGifts' => $coinGifts,
         ));

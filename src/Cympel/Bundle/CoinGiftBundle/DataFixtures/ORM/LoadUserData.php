@@ -42,9 +42,45 @@ class LoadUserData extends AbstractFixture implements OrderedFixtureInterface
         $user2->setImageUri("/stuff/images/courtland-caldwell.jpg");
         $manager->persist($user2);
 
+        $jesse = new User();
+        $jesse->setId("slack0ff");
+        $jesse->setFirstName('Jesse');
+        $jesse->setLastName('Hultgren');
+        $jesse->setBankCustomer(false);
+        $jesse->setCoinBalance(0);
+        $jesse->setCreated(time());
+        $jesse->setDisabled(false);
+        $jesse->setImageUri("/stuff/images/jesse-hultgren.jpg");
+        $manager->persist($jesse);
+
+        $danny = new User();
+        $danny->setId("cardl33");
+        $danny->setFirstName("Danny");
+        $danny->setLastName("Lopez");
+        $danny->setBankCustomer(true);
+        $danny->setCoinBalance(500);
+        $danny->setCreated(time());
+        $danny->setDisabled(false);
+        $danny->setImageUri("/stuff/images/gerson-danny-lopez.jpg");
+        $manager->persist($danny);
+
+        $toni = new User();
+        $toni->setId("bizex");
+        $toni->setFirstName("Toni");
+        $toni->setLastName("Milovan");
+        $toni->setBankCustomer(true);
+        $toni->setCoinBalance(500);
+        $toni->setCreated(time());
+        $toni->setDisabled(false);
+        $toni->setImageUri("/stuff/images/toni-milovan.jpg");
+        $manager->persist($toni);
+
         $manager->flush();
         $this->addReference('user', $user);
         $this->addReference('user2', $user2);
+        $this->addReference('jesse', $jesse);
+        $this->addReference('danny', $danny);
+        $this->addReference('toni', $toni);
     }
 
     public function getOrder()

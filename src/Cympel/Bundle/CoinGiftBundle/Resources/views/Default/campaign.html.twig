@@ -63,10 +63,7 @@
 
       	<div class="blog">
 
-			<h6>Join the conversation</h6>
-        	<p>Normal Paragraph, Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec ullamcorper nulla non metus auctor fringilla. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. </p>
-        
-
+			{{ render(controller('CympelCoinGiftBundle:Default:comments', {'campaignName': campaign.id})) }}
 
       	</div>
 

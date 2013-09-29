@@ -65,6 +65,23 @@ class Comment implements iType
     protected $votes;
 
     /**
+     * @var string
+     *
+     * The actual comment message the user enters and is displayed
+     *
+     * @ORM\Column(type="text")
+     */
+    protected $message;
+
+    /**
+     * @var int
+     * The unix timestamp when the comment was created
+     *
+     * @ORM\Column(type="bigint")
+     */
+    protected $timestamp;
+
+    /**
      * @param \Cympel\Bundle\CoinGiftBundle\Entity\Campaign $campaign
      */
     public function setCampaign($campaign)
@@ -160,7 +177,51 @@ class Comment implements iType
         return $this->votes;
     }
 
+    /**
+     * @param string $message
+     */
+    public function setMessage($message)
+    {
+        $this->message = $message;
+    }
 
+    /**
+     * @return string
+     */
+    public function getMessage()
+    {
+        return $this->message;
+    }
+
+    /**
+     * @param int $timestamp
+     */
+    public function setTimestamp($timestamp)
+    {
+        $this->timestamp = $timestamp;
+    }
+
+    /**
+     * @return int
+     */
+    public function getTimestamp()
+    {
+        return $this->timestamp;
+    }
+
+    public final function getDate()
+    {
+        return date("M j, Y", $this->timestamp);
+    }
+
+    public final function getVoteTotal()
+    {
+        $total = 0;
+        foreach($this->votes as $key => $value) {
+            $total += $value->getValue();
+        }
+        return $total;
+    }
 
     public function __construct()
     {

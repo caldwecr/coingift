@@ -1,1 +1,51 @@
-comments here ...
+{% for comment in comments %}
+    <div class="comment">
+        <div class="voting">
+            <a href="#">
+                <div class="voteUp">
+                    +
+                </div>
+            </a>
+            <div class="voteTotal">
+                {{ comment.voteTotal }}
+            </div>
+            <a href="#">
+                <div class="voteDown">
+                    -
+                </div>
+            </a>
+        </div>
+        <span class="commentAuthor">
+            {{ comment.user.firstName }} {{ comment.user.lastName }}
+        </span>
+        <input type="hidden" class="commentId" id="comment{{ comment.id }}" value="{{ comment.id }}" />
+        <div class="commentMessage">
+            {{ comment.message }}
+        </div>
+        <div class="commentFooter">
+            <a href="#">
+                <span class="commentOnComment">
+                    Comment
+                </span>
+            </a>
+            <a href="#">
+                <span class="shareComment">
+                    Share
+                </span>
+            </a>
+            <a href="#">
+                <span class="thankCommentUser">
+                    Thank
+                </span>
+            </a>
+            <a href="#">
+                <span class="reportComment">
+                    Report
+                </span>
+            </a>
+            <span class="commentDate">
+                {{ comment.date }}
+            </span>
+        </div>
+    </div>
+{% endfor %}

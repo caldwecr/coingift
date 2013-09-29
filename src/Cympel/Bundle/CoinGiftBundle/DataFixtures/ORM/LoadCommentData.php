@@ -25,10 +25,22 @@ class LoadCommentData extends AbstractFixture implements OrderedFixtureInterface
         $comment = new Comment();
         $comment->setUser($this->getReference('user'));
         $comment->setCampaign($this->getReference('campaign'));
+        $comment->setTimestamp(time());
         $comment->setParent(null);
+        $comment->setMessage("I think that this is a terrific campaign, and I encourage everyone to gift to it.");
         $manager->persist($comment);
+
+        $comment2 = new Comment();
+        $comment2->setUser($this->getReference('user2'));
+        $comment2->setCampaign($this->getReference('campaign'));
+        $comment2->setTimestamp(time());
+        $comment2->setParent(null);
+        $comment2->setMessage("I'm over the moon about this campaign. My grandfather was one of the original astronauts and he believed everyone should have a chance to visit the moon");
+        $manager->persist($comment2);
+
         $manager->flush();
         $this->addReference('comment', $comment);
+        $this->addReference('comment2', $comment2);
     }
 
     public function getOrder()

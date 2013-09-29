@@ -6,7 +6,10 @@ use Cympel\Bundle\CoinGiftBundle\Entity\NotificationMethod;
 use Cympel\Bundle\CoinGiftBundle\Entity\ShareOnNetwork;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Cympel\Bundle\CoinGiftBundle\Entity\Campaign;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
+use Cympel\Bundle\CoinGiftBundle\Entity\Vote;
 
 class DefaultController extends Controller
 {
@@ -130,6 +133,54 @@ class DefaultController extends Controller
 
     public function commentsAction($campaignName)
     {
-        return $this->render('CympelCoinGiftBundle:Default:comments.html.twig');
+        $repository = $this->getDoctrine()
+            ->getRepository('CympelCoinGiftBundle:Comment');
+        $comments = $repository->findBy(
+            array('campaign' => $campaignName)
+        );
+
+        return $this->render('CympelCoinGiftBundle:Default:comments.html.twig', array(
+            'comments' => $comments,
+        ));
+    }
+
+    public function voteUsernameAction($commentId, $username, $voteValue)
+    {
+        return new JsonResponse(json_encode("vote received"));
+    }
+
+    /**
+     * @param $commentId
+     * @param $voteValue
+     * @return JsonResponse
+     *
+     * This function cheats and uses a fixtured user to cast a vote
+     */
+    public function voteAction($commentId, $voteValue)
+    {
+        $manager = $this->getDoctrine()->getManager();
+        $vote = new Vote();
+
+        $repository = $this->getDoctrine()
+            ->getRepository('CympelCoinGiftBundle:User');
+        $user = $repository->find("coolguy123");
+
+        $vote->setUser($user);
+
+        $repository = $this->getDoctrine()
+            ->getRepository('CympelCoinGiftBundle:Comment');
+        $comment = $repository->find($commentId);
+
+        $vote->setComment($comment);
+        $vote->setValue($voteValue);
+        $manager->persist($vote);
+        $manager->flush();
+
+        $response = array(
+            'success' => true,
+            'voteTotal' => $comment->getVoteTotal(),
+            'commentId' => $commentId,
+        );
+        return new JsonResponse($response);
     }
 }

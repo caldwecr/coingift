@@ -26,12 +26,14 @@
         {% block javascripts %}
         <!-- scripts (if possible place these scripts at the bottom) -->
         {% javascripts
-            'stuff/js/custom.modernizr.js'
-                filter='?uglifyjs2' %}
+            'stuff/js/vendor/custom.modernizr.js'
+            'stuff/js/vendor/jquery.js'
+            'stuff/js/coingift/vote.js'
+        %}
             <script src="{{ asset_url }}"></script>
         {% endjavascripts %}
 
-        <script src="/stuff/js/custom.modernizr.js"></script>        
+
         
         <!-- scripts (if possible place these scripts at the bottom) -->
         <!--[if lt IE 9]>

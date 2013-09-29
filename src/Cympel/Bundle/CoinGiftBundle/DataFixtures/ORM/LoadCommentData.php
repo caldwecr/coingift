@@ -27,7 +27,8 @@ class LoadCommentData extends AbstractFixture implements OrderedFixtureInterface
         $comment->setCampaign($this->getReference('campaign'));
         $comment->setTimestamp(time());
         $comment->setParent(null);
-        $comment->setMessage("I think that this is a terrific campaign, and I encourage everyone to gift to it.");
+        $comment->setMessage("I think that this is a terrific campaign, and I encourage everyone to gift to it. I've always wanted to visit the moon and this project will give everyone a
+        real chance to visit a place they've never been. I can't wait for this to get funded.");
         $manager->persist($comment);
 
         $comment2 = new Comment();
@@ -43,7 +44,7 @@ class LoadCommentData extends AbstractFixture implements OrderedFixtureInterface
         $comment3->setCampaign($this->getReference('campaign'));
         $comment3->setTimestamp(time());
         $comment3->setParent($comment);
-        $comment3->setMessage("Your comment is really cool");
+        $comment3->setMessage("Your comment is really cool, I'll see you on the moon - if you don't lose your way.");
         $manager->persist($comment3);
 
         $comment4 = new Comment();

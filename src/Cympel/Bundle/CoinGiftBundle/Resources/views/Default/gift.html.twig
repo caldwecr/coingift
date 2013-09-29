@@ -1,1 +1,101 @@
-here's where the user picks the amount to give
+{# app/Resources/views/base.html.twig #}
+{% extends '::base.html.twig' %}
+
+	{% block body %}
+
+	<body>
+
+    {{ include('CympelCoinGiftBundle:Default:nav.html.twig')}}
+
+
+  <!-- Trending this week -->
+
+  <div class="row">
+    <div class="large-12 columns">    	
+      <div class="row">
+        
+        <div class="large-8 small-12 columns">
+        	
+        	<h3>Campaign Title</h3>
+        	<p>Normal Paragraph, Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec ullamcorper nulla non metus auctor fringilla. </p>
+
+        	<h5>How much would you like to give?</h5>
+
+        	<form>
+
+        		<div class="coins-amount">
+
+        			<ul>
+        				<li>        					        				
+        					<input type="radio" value="$1" class="field radio" name="#" id="#">
+        					<img src="/stuff/images/icon-1d-money.png" />
+        					<span>$1.00</span>	        				
+	        			</li>
+						<li>        					        				
+        					<input type="radio" value="$1" class="field radio" name="#" id="#">
+        					<img src="/stuff/images/icon-2d-money.png" />
+        					<span>$2.00</span>	
+	        			</li>	        			
+	        			<li>        					        				
+        					<input type="radio" value="$1" class="field radio" name="#" id="#">
+        					<img src="/stuff/images/icon-3d-money.png" />
+        					<span>$3.00</span>	
+	        			</li>
+	        			<li>        					        				
+        					<input type="radio" value="$1" class="field radio" name="#" id="#">
+        					<img src="/stuff/images/icon-4d-money.png" />
+        					<span>$4.00</span>	
+	        			</li>
+	        			<li>        					        				
+        					<input type="radio" value="$1" class="field radio" name="#" id="#">
+        					<img src="/stuff/images/icon-5d-money.png" />
+        					<span>$5.00</span>	
+	        			</li>
+        			</ul>
+        			<p><input type="Submit" value="Give Now" class="medium button expand" /></p>
+
+        		</div>
+
+
+        	</form>
+
+        </div> {# end large-8 #}
+
+
+        <div class="large-4 small-12 columns">
+
+        	<div class="panel faq help-idea">
+	        	<h5>How much can I give?</h5>
+	        	<p>Normal Paragraph, Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec ullamcorper nulla non metus auctor fringilla. </p>
+	        	<p><a href="#">See more &#187;</a></p>
+	        </div>
+
+	        <div class="panel faq">
+	        	<h5>How do I get notified of my giving?</h5>
+	        	<p>Normal Paragraph, Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec ullamcorper nulla non metus auctor fringilla. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. </p>
+	        	<p><a href="#">See more &#187;</a></p>
+	        </div>
+
+	        <div class="panel faq">
+	        	<h5>Do I get refunded if the cause I choose doesn't get elected?</h5>
+	        	<p>Normal Paragraph, Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec ullamcorper nulla non metus auctor fringilla. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. </p>
+	        	<p><a href="#">See more &#187;</a></p>
+	        </div>
+					
+
+        </div>  {# end large-4 #}
+
+      </div> {# end row #}
+
+  </div>
+
+<!-- End trending this week -->
+
+{{ include('CympelCoinGiftBundle:Default:footer.html.twig')}}
+  
+{{ include('CympelCoinGiftBundle:Default:scripts.html.twig')}}
+
+	</body>
+
+{% endblock body %}
+

@@ -30,9 +30,10 @@ class LoadCampaignData extends AbstractFixture implements OrderedFixtureInterfac
         $campaign->setInspiration("my inspiration is nasa");
         $campaign->setHeadlineImageUri("/stuff/images/cmpgn-img-moontrip.jpg");
         $manager->persist($campaign);
+        $moon = $campaign;
 
         $campaign2 = new Campaign();
-        $campaign2->setUser($this->getReference('user'));
+        $campaign2->setUser($this->getReference('user2'));
         $campaign2->setId("Park clean up");
         $campaign2->setSummary("This is a great idea because ...");
         $campaign2->setBenefitsImpact("it will do great things");
@@ -40,9 +41,10 @@ class LoadCampaignData extends AbstractFixture implements OrderedFixtureInterfac
         $campaign2->setInspiration("my inspiration is nasafwefw");
         $campaign2->setHeadlineImageUri("/stuff/images/cmpgn-img-parkcleanup.jpg");
         $manager->persist($campaign2);
+        $park = $campaign2;
 
         $campaign3 = new Campaign();
-        $campaign3->setUser($this->getReference('user'));
+        $campaign3->setUser($this->getReference('jesse'));
         $campaign3->setId("Gun buy back");
         $campaign3->setSummary("This is a great idea because ...");
         $campaign3->setBenefitsImpact("it will do great thingsalso");
@@ -50,9 +52,10 @@ class LoadCampaignData extends AbstractFixture implements OrderedFixtureInterfac
         $campaign3->setInspiration("my inspiration is nasa");
         $campaign3->setHeadlineImageUri("/stuff/images/cmpgn-img-gunbuyback.jpg");
         $manager->persist($campaign3);
+        $gun = $campaign3;
 
         $campaign4 = new Campaign();
-        $campaign4->setUser($this->getReference('user'));
+        $campaign4->setUser($this->getReference('toni'));
         $campaign4->setId("Homeless housing");
         $campaign4->setSummary("This is a great idea because ...");
         $campaign4->setBenefitsImpact("it will do great things4");
@@ -60,6 +63,7 @@ class LoadCampaignData extends AbstractFixture implements OrderedFixtureInterfac
         $campaign4->setInspiration("my inspiration is nasa");
         $campaign4->setHeadlineImageUri("/stuff/images/cmpgn-img-homelesshousing.jpg");
         $manager->persist($campaign4);
+        $homeless = $campaign4;
 
         $campaign5 = new Campaign();
         $campaign5->setUser($this->getReference('user'));
@@ -70,9 +74,10 @@ class LoadCampaignData extends AbstractFixture implements OrderedFixtureInterfac
         $campaign5->setInspiration("my inspiration is nasa");
         $campaign5->setHeadlineImageUri("/stuff/images/cmpgn-img-downtownblock.jpg");
         $manager->persist($campaign5);
+        $demo = $campaign5;
 
         $campaign6 = new Campaign();
-        $campaign6->setUser($this->getReference('user'));
+        $campaign6->setUser($this->getReference('danny'));
         $campaign6->setId("Girl scout pink party");
         $campaign6->setSummary("This is a great idea because ...");
         $campaign6->setBenefitsImpact("it will do great things");
@@ -80,9 +85,10 @@ class LoadCampaignData extends AbstractFixture implements OrderedFixtureInterfac
         $campaign6->setInspiration("my inspiration is nasa");
         $campaign6->setHeadlineImageUri("/stuff/images/cmpgn-img-girlscout.jpg");
         $manager->persist($campaign6);
+        $girl = $campaign6;
 
         $campaign7 = new Campaign();
-        $campaign7->setUser($this->getReference('user'));
+        $campaign7->setUser($this->getReference('jesse'));
         $campaign7->setId("Hack a thon");
         $campaign7->setSummary("This is a great idea because ...");
         $campaign7->setBenefitsImpact("it will do great things");
@@ -90,9 +96,10 @@ class LoadCampaignData extends AbstractFixture implements OrderedFixtureInterfac
         $campaign7->setInspiration("my inspiration is nasa");
         $campaign7->setHeadlineImageUri("/stuff/images/cmpgn-img-hackathon.jpg");
         $manager->persist($campaign7);
+        $hack = $campaign7;
 
         $campaign8 = new Campaign();
-        $campaign8->setUser($this->getReference('user'));
+        $campaign8->setUser($this->getReference('toni'));
         $campaign8->setId("Voter registration");
         $campaign8->setSummary("This is a great idea because ...");
         $campaign8->setBenefitsImpact("it will do great things");
@@ -100,6 +107,7 @@ class LoadCampaignData extends AbstractFixture implements OrderedFixtureInterfac
         $campaign8->setInspiration("my inspiration is nasa");
         $campaign8->setHeadlineImageUri("/stuff/images/juju-portrait.jpg");
         $manager->persist($campaign8);
+        $voter = $campaign8;
 
         $campaign9 = new Campaign();
         $campaign9->setUser($this->getReference('user2'));
@@ -110,9 +118,19 @@ class LoadCampaignData extends AbstractFixture implements OrderedFixtureInterfac
         $campaign9->setInspiration("Mario and Luigi");
         $campaign9->setHeadlineImageUri("/stuff/images/cmpgn-img-nintendo.png");
         $manager->persist($campaign9);
+        $nintendo = $campaign9;
 
         $manager->flush();
         $this->addReference('campaign', $campaign);
+        $this->addReference('moon', $moon);
+        $this->addReference('park', $park);
+        $this->addReference('gun', $gun);
+        $this->addReference('homeless', $homeless);
+        $this->addReference('demo', $demo);
+        $this->addReference('girl', $girl);
+        $this->addReference('hack', $hack);
+        $this->addReference('voter', $voter);
+        $this->addReference('nintendo', $nintendo);
     }
 
     public function getOrder()

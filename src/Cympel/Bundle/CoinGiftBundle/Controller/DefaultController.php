@@ -2,6 +2,7 @@
 
 namespace Cympel\Bundle\CoinGiftBundle\Controller;
 
+use Cympel\Bundle\CoinGiftBundle\Entity\Comment;
 use Cympel\Bundle\CoinGiftBundle\Entity\NotificationMethod;
 use Cympel\Bundle\CoinGiftBundle\Entity\ShareOnNetwork;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -182,5 +183,44 @@ class DefaultController extends Controller
             'commentId' => $commentId,
         );
         return new JsonResponse($response);
+    }
+
+    public function newCampaignCommentAction(Request $request, $campaignName)
+    {
+        $comment = new Comment();
+
+        $repository = $this->getDoctrine()
+            ->getRepository('CympelCoinGiftBundle:User');
+        $user = $repository->find("coolguy123");
+
+        $comment->setUser($user);
+        $comment->setTimestamp(time());
+
+        $repository = $this->getDoctrine()
+            ->getRepository('CympelCoinGiftBundle:Campaign');
+        $campaign = $repository->find($campaignName);
+        $comment->setCampaign($campaign);
+
+        $form = $this->createFormBuilder($comment)
+            ->setAction($this->generateUrl('coinGiftNewCampaignComment', array(
+                'campaignName' => $campaignName,
+            )))
+            ->add('message', 'textarea')
+            ->getForm();
+
+        $form->handleRequest($request);
+
+        if($form->isValid()) {
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($comment);
+            $em->flush();
+
+            return $this->redirect($this->generateUrl('coinGiftCampaign', array(
+                'campaignName' => $campaignName,
+            )));
+        }
+        return $this->render('CympelCoinGiftBundle:Default:comment.html.twig', array(
+            'form' => $form->createView(),
+        ));
     }
 }

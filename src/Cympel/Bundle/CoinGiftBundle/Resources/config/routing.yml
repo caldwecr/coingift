@@ -28,3 +28,6 @@ coinGiftVoteUsername:
 coinGiftVote:
     pattern: /vote/{commentId}/{voteValue}
     defaults: { _controller: CympelCoinGiftBundle:Default:vote }
+coinGiftNewCampaignComment:
+    pattern: /new/campaign/comment/{campaignName}
+    defaults: { _controller: CympelCoinGiftBundle:Default:newCampaignComment }

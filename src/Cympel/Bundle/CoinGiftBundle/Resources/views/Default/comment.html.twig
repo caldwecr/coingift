@@ -1,0 +1,12 @@
+{{ form_start(form) }}
+    {{ form_errors(form) }}
+<div class="large-8 small-12 columns">
+    <div class="submit-q">
+        {{ form_label(form.message) }}
+        {{ form_errors(form.message) }}
+        {{ form_widget(form.message) }}
+    </div>
+    <input type="submit" value="Post" class="medium button expand" />
+</div>  {# end large-8 #}
+{{ form_end(form) }}
+

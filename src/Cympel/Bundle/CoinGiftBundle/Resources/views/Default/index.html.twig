@@ -17,6 +17,7 @@
         <div class="billboard">
         	<div class="small-8 large-centered columns stats-n-cta">        		
         		<img src="/stuff/images/billboard-text.png" />
+                <a href="{{ path('coinGiftCreate') }}">Share Your Idea</a>
         	</div>
               
           </div>
@@ -51,58 +52,7 @@
 
   <!-- Trending this week -->
 
-  <div class="row">
-    <div class="large-12 columns">
-    	<h4>Trending this week</h4>
-      <div class="row">      	    
-
-        <div class="large-3 small-6 columns">        	
-          <img src="http://placehold.it/250x250&text=Thumbnail" />
-          <h6 class="panel">Description</h6>
-        </div>
-
-        <div class="large-3 small-6 columns">
-          <img src="http://placehold.it/250x250&text=Thumbnail" />
-          <h6 class="panel">Description</h6>
-        </div>
-
-        <div class="large-3 small-6 columns">
-          <img src="http://placehold.it/250x250&text=Thumbnail" />
-          <h6 class="panel">Description</h6>
-        </div>
-
-        <div class="large-3 small-6 columns">
-          <img src="http://placehold.it/250x250&text=Thumbnail" />
-          <h6 class="panel">Description</h6>
-        </div>    
-
-      </div>
-
-      <div class="row">      	    
-
-        <div class="large-3 small-6 columns">        	
-          <img src="http://placehold.it/250x250&text=Thumbnail" />
-          <h6 class="panel">Description</h6>
-        </div>
-
-        <div class="large-3 small-6 columns">
-          <img src="http://placehold.it/250x250&text=Thumbnail" />
-          <h6 class="panel">Description</h6>
-        </div>
-
-        <div class="large-3 small-6 columns">
-          <img src="http://placehold.it/250x250&text=Thumbnail" />
-          <h6 class="panel">Description</h6>
-        </div>
-
-        <div class="large-3 small-6 columns">
-          <img src="http://placehold.it/250x250&text=Thumbnail" />
-          <h6 class="panel">Description</h6>
-        </div>    
-
-      </div>
-    </div>
-  </div>
+  {{ render(controller('CympelCoinGiftBundle:Default:trending')) }}
 
 <!-- End trending this week -->
 

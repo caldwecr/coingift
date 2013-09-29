@@ -23,12 +23,68 @@ class LoadCampaignData extends AbstractFixture implements OrderedFixtureInterfac
     {
         $campaign = new Campaign();
         $campaign->setUser($this->getReference('user'));
-        $campaign->setId("testCampaign");
+        $campaign->setId("Moon Trip");
         $campaign->setBenefitsImpact("it will do great things");
         $campaign->setIdea("my idea is to fly to the moon");
         $campaign->setInspiration("my inspiration is nasa");
-
         $manager->persist($campaign);
+
+        $campaign2 = new Campaign();
+        $campaign2->setUser($this->getReference('user'));
+        $campaign2->setId("Park clean up");
+        $campaign2->setBenefitsImpact("it will do great things");
+        $campaign2->setIdea("my idea is to fly to the moon23r");
+        $campaign2->setInspiration("my inspiration is nasafwefw");
+        $manager->persist($campaign2);
+
+        $campaign3 = new Campaign();
+        $campaign3->setUser($this->getReference('user'));
+        $campaign3->setId("Gun buy back");
+        $campaign3->setBenefitsImpact("it will do great thingsalso");
+        $campaign3->setIdea("my idea is to fly to the moon");
+        $campaign3->setInspiration("my inspiration is nasa");
+        $manager->persist($campaign3);
+
+        $campaign4 = new Campaign();
+        $campaign4->setUser($this->getReference('user'));
+        $campaign4->setId("Homeless housing");
+        $campaign4->setBenefitsImpact("it will do great things4");
+        $campaign4->setIdea("my idea is to fly to the moon");
+        $campaign4->setInspiration("my inspiration is nasa");
+        $manager->persist($campaign4);
+
+        $campaign5 = new Campaign();
+        $campaign5->setUser($this->getReference('user'));
+        $campaign5->setId("Downtown block demo");
+        $campaign5->setBenefitsImpact("it will do great things");
+        $campaign5->setIdea("my idea is to fly to the moon");
+        $campaign5->setInspiration("my inspiration is nasa");
+        $manager->persist($campaign5);
+
+        $campaign6 = new Campaign();
+        $campaign6->setUser($this->getReference('user'));
+        $campaign6->setId("Girl scout pink party");
+        $campaign6->setBenefitsImpact("it will do great things");
+        $campaign6->setIdea("my idea is to fly to the moon");
+        $campaign6->setInspiration("my inspiration is nasa");
+        $manager->persist($campaign6);
+
+        $campaign7 = new Campaign();
+        $campaign7->setUser($this->getReference('user'));
+        $campaign7->setId("Hack a thon");
+        $campaign7->setBenefitsImpact("it will do great things");
+        $campaign7->setIdea("my idea is to fly to the moon");
+        $campaign7->setInspiration("my inspiration is nasa");
+        $manager->persist($campaign7);
+
+        $campaign8 = new Campaign();
+        $campaign8->setUser($this->getReference('user'));
+        $campaign8->setId("Voter registration");
+        $campaign8->setBenefitsImpact("it will do great things");
+        $campaign8->setIdea("my idea is to fly to the moon");
+        $campaign8->setInspiration("my inspiration is nasa");
+        $manager->persist($campaign8);
+
         $manager->flush();
         $this->addReference('campaign', $campaign);
     }

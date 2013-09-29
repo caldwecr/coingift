@@ -61,4 +61,23 @@ class DefaultController extends Controller
             'form' => $form->createView(),
         ));
     }
+
+    public function trendingAction()
+    {
+        $repository = $this->getDoctrine()
+            ->getRepository('CympelCoinGiftBundle:Campaign');
+        $query = $repository->createQueryBuilder('c')
+            ->setMaxResults(4)
+            ->getQuery();
+        $firstFourCampaigns = $query->getResult();
+        $query = $repository->createQueryBuilder('c')
+            ->setMaxResults(4)
+            ->setFirstResult(4)
+            ->getQuery();
+        $nextFourCampaigns = $query->getResult();
+        return $this->render('CympelCoinGiftBundle:Default:trending.html.twig', array(
+            'firstFourCampaigns' => $firstFourCampaigns,
+            'nextFourCampaigns' => $nextFourCampaigns,
+        ));
+    }
 }

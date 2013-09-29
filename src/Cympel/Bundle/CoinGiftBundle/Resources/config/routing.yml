@@ -10,3 +10,6 @@ coinGiftCampaign:
 coinGiftCreateForm:
     pattern: /create/form
     defaults: { _controller: CympelCoinGiftBundle:Default:createForm }
+coinGiftTrending:
+    pattern: /trending
+    defaults: { _controller: CympelCoinGiftBundle:Default:trending }

@@ -37,7 +37,11 @@ $(function() {
         var parentCommentId = $(this).parents('div.comment').find('.commentId').val();
         var request = $.ajax({
             url: "/app_dev.php/coin/gift/new/comment/comment/" + parentCommentId + "",
-            dataType: "html"
+            dataType: "html",
+            context: $("#putSubCommentHere" + parentCommentId + "")
+        });
+        request.done(function(response){
+            $(this).html(response);
         });
     });
 });

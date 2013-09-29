@@ -93,6 +93,15 @@ class LoadCampaignData extends AbstractFixture implements OrderedFixtureInterfac
         $campaign8->setHeadlineImageUri("http://placehold.it/250x250&text=Thumbnail");
         $manager->persist($campaign8);
 
+        $campaign9 = new Campaign();
+        $campaign9->setUser($this->getReference('user2'));
+        $campaign9->setId("Nintendo-4-kids");
+        $campaign9->setBenefitsImpact("All children will have an original NES");
+        $campaign9->setIdea("Free original nintendos for anyone under 12 that wants one");
+        $campaign9->setInspiration("Mario and Luigi");
+        $campaign9->setHeadlineImageUri("http://upload.wikimedia.org/wikipedia/commons/8/82/NES-Console-Set.jpg");
+        $manager->persist($campaign9);
+
         $manager->flush();
         $this->addReference('campaign', $campaign);
     }

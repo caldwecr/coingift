@@ -91,6 +91,36 @@ class Campaign implements iType
     protected $headlineImageUri;
 
     /**
+     * @return float
+     *
+     * The regular dollars and cents decimal value is returned
+     */
+    public final function getCoinTotal()
+    {
+        $coinTotal = 0;
+        foreach($this->coinGifts as $key => $value) {
+            $coinTotal += $value->getCoinGiftValue();
+        }
+        return $coinTotal / 100.0;
+    }
+
+    /**
+     * @return int
+     *
+     * Returns the number of gifts greater than 0 pennies
+     */
+    public final function getGiverCount()
+    {
+        $giverCount = 0;
+        foreach($this->coinGifts as $key => $value) {
+            if($value->getCoinGiftValue() > 0) {
+                $giverCount++;
+            }
+        }
+        return $giverCount;
+    }
+
+    /**
      * @param \Doctrine\Common\Collections\ArrayCollection $coinGifts
      */
     public function setCoinGifts($coinGifts)

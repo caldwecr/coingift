@@ -46,6 +46,30 @@ class CoinGift implements iType
     protected $campaign;
 
     /**
+     * @var int
+     * @ORM\Column(type="bigint")
+     */
+    protected $coinGiftValue;
+
+    /**
+     * @param int $coinGiftValue
+     */
+    public function setCoinGiftValue($coinGiftValue)
+    {
+        $this->coinGiftValue = $coinGiftValue;
+    }
+
+    /**
+     * @return int
+     */
+    public function getCoinGiftValue()
+    {
+        return $this->coinGiftValue;
+    }
+
+
+
+    /**
      * @param \Cympel\Bundle\CoinGiftBundle\Entity\Campaign $campaign
      */
     public function setCampaign($campaign)

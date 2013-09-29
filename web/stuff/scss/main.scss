@@ -229,6 +229,35 @@ textarea {
 	padding: 20px 0 0 0;
 }
 
+/* ==========================================================================
+   Giving Page
+   ========================================================================== */
+
+.coins-amount {
+	ul {		
+		li {
+			border-bottom: 1px solid #ddd;
+			padding: 1em 1em 1em .25em;
+			list-style: none;
+			img {
+				display: inline-block;
+				margin: 0 .75em 0 .5em;
+				position: relative;
+				top: -4px;
+			}
+			span {
+				font-size: 28px;
+				line-height: 28px;
+				font-weight: bold;
+				color: #4c5b52;
+			}
+			&:first-child {
+				border-top: 1px solid #ddd;
+			}
+		}
+	}
+}
+
 
 /* Reusable widgets */
 

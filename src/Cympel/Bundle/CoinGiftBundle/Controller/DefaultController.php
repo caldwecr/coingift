@@ -127,4 +127,9 @@ class DefaultController extends Controller
     {
         return $this->render('CympelCoinGiftBundle:Default:gift.html.twig');
     }
+
+    public function commentsAction($campaignName)
+    {
+        return $this->render('CympelCoinGiftBundle:Default:comments.html.twig');
+    }
 }

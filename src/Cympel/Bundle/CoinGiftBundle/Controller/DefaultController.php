@@ -330,4 +330,18 @@ class DefaultController extends Controller
             'form' => $form->createView(),
         ));
     }
+
+    public function giftersAction(Request $request, $campaignName)
+    {
+        $repository = $this->getDoctrine()
+            ->getRepository('CympelCoinGiftBundle:CoinGift');
+        $coinGifts = $repository->findBy(
+            array(
+                'campaign' => $campaignName,
+            )
+        );
+        return $this->render('CympelCoinGiftBundle:Default:gifters.html.twig', array(
+            'coinGifts' => $coinGifts,
+        ));
+    }
 }

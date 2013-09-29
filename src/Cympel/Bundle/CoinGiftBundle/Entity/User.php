@@ -97,12 +97,19 @@ class User implements iType
      */
     protected $coinGifts;
 
+    /**
+     * @var string
+     * @ORM\Column(type="text")
+     */
+    protected $imageUri;
+
     public function __construct()
     {
         $this->votes = new ArrayCollection();
         $this->campaigns = new ArrayCollection();
         $this->comments = new ArrayCollection();
         $this->coinGifts = new ArrayCollection();
+        $this->imageUri = "/stuff/images/sm-user-thumb.jpg";
     }
 
     /**
@@ -215,6 +222,22 @@ class User implements iType
     public function getLastName()
     {
         return $this->lastName;
+    }
+
+    /**
+     * @param string $imageUri
+     */
+    public function setImageUri($imageUri)
+    {
+        $this->imageUri = $imageUri;
+    }
+
+    /**
+     * @return string
+     */
+    public function getImageUri()
+    {
+        return $this->imageUri;
     }
 
 

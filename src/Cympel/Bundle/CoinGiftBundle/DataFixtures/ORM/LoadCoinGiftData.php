@@ -33,6 +33,11 @@ class LoadCoinGiftData extends AbstractFixture implements OrderedFixtureInterfac
         $coinGift2->setCampaign($this->getReference('campaign'));
         $coinGift2->setCoinGiftValue(300);
         $manager->persist($coinGift2);
+        $coinGift3 = new CoinGift();
+        $coinGift3->setUser($this->getReference('user2'));
+        $coinGift3->setCampaign($this->getReference('campaign'));
+        $coinGift3->setCoinGiftValue(200);
+        $manager->persist($coinGift3);
         $manager->flush();
         $this->addReference('coinGift', $coinGift);
     }

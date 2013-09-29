@@ -22,22 +22,24 @@ class LoadUserData extends AbstractFixture implements OrderedFixtureInterface
     {
         $user = new User();
         $user->setId("coolguy123");
-        $user->setFirstName("Chris");
-        $user->setLastName("Smith");
+        $user->setFirstName("Juliano");
+        $user->setLastName("Dasilva");
         $user->setBankCustomer(true);
         $user->setCoinBalance(500);
         $user->setCreated(time());
         $user->setDisabled(false);
+        $user->setImageUri("/stuff/images/juju-portrait.jpg");
         $manager->persist($user);
 
         $user2 = new User();
         $user2->setId("smartguy1337");
-        $user2->setFirstName("Hax");
-        $user2->setLastName("Sword");
+        $user2->setFirstName("Courtland");
+        $user2->setLastName("Caldwell");
         $user2->setBankCustomer(true);
         $user2->setCoinBalance(500);
         $user2->setCreated(time());
         $user2->setDisabled(false);
+        $user2->setImageUri("/stuff/images/courtland-caldwell.jpg");
         $manager->persist($user2);
 
         $manager->flush();

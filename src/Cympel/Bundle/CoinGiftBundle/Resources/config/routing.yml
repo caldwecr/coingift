@@ -40,3 +40,6 @@ coinGiftNewCampaignComment:
 coinGiftNewCommentComment:
     pattern: /new/comment/comment/{parentCommentId}
     defaults: { _controller: CympelCoinGiftBundle:Default:newCommentComment }
+coinGiftGifters:
+    pattern: /gifters/{campaignName}
+    defaults: { _controller: CympelCoinGiftBundle:Default:gifters }

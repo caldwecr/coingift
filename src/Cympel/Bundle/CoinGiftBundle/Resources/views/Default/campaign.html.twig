@@ -92,8 +92,8 @@
         	<div class="sidebarBoxOne profile">
         		<h6 class="sidebarBoxTitle">Campaign Creator</h6>
         		<ul class="cmpgnCreator">
-        			<li class="picture"><img src="/stuff/images/juju-portrait.jpg" /></li>
-        			<li class="name"><h5><a href="#">Juliano Dasilva</a></h5></li>
+        			<li class="picture"><img src="{{ campaign.user.imageUri }}" /></li>
+        			<li class="name"><h5><a href="#">{{ campaign.user.firstName }} {{ campaign.user.lastName }}</a></h5></li>
         			<li><p>365 Washington Street Stoughton, MA 02071</p></li>
 	        		<li><p><strong>Submissions:</strong> 01</p></li>
 	        		<li><p><strong>FNB Customer:</strong> No</p></li>
@@ -101,42 +101,7 @@
 	        	<p><a href="#">See more &#187;</a></p>
 	        </div>
 
-	        <div class="sidebarBoxOne profile">
-        		<h6 class="sidebarBoxTitle">Givers</h6>
-        		<ul class="giversList">
-        			<li>        				
-        				<p>
-        					<img src="/stuff/images/sm-user-thumb.jpg" />
-        					<a href="#">Courtland Caldwell</a>
-        				</p>
-        			</li>
-        			<li>						
-        				<p>
-        					<img src="/stuff/images/sm-user-thumb.jpg" />
-        					<a href="#">Faith Larson</a>
-        				</p>
-        			</li>
-        			<li>
-        				<p>
-							<img src="/stuff/images/sm-user-thumb.jpg" />
-        					<a href="#">Faith Larson</a>
-        				</p>
-        			</li>
-        			<li>
-						<p>
-							<img src="/stuff/images/sm-user-thumb.jpg" />
-        					<a href="#">Faith Larson</a>
-        				</p>
-        			</li>
-        			<li>
-						<p>
-							<img src="/stuff/images/sm-user-thumb.jpg" />
-        					<a href="#">Faith Larson</a>
-        				</p>
-        			</li>	
-	        	</ul>	        		        	
-	        	<p><a href="#">See more givers &#187;</a></p>
-	        </div>
+	       {{ render(controller('CympelCoinGiftBundle:Default:gifters', {'campaignName': campaign.id})) }}
 
 
 	        <div class="sidebarBoxOne profile">

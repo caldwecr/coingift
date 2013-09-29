@@ -1,0 +1,14 @@
+<div class="sidebarBoxOne profile">
+    <h6 class="sidebarBoxTitle">Givers</h6>
+    <ul class="giversList">
+        {% for coinGift in coinGifts %}
+        <li>
+            <p>
+                <img src="{{ coinGift.user.imageUri }}" />
+                <a href="#">{{ coinGift.user.firstName }} {{ coinGift.user.lastName }}</a>
+            </p>
+        </li>
+        {% endfor %}
+    </ul>
+    <p><a href="#">See more givers &#187;</a></p>
+</div>

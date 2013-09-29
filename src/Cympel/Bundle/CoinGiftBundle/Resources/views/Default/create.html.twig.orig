@@ -1,0 +1,120 @@
+{# app/Resources/views/base.html.twig #}
+{% extends '::base.html.twig' %}
+
+	{% block body %}
+
+	<body>
+
+    {{ include('CympelCoinGiftBundle:Default:nav.html.twig')}}
+
+
+  <!-- Trending this week -->
+
+  <div class="row">
+    <div class="large-12 columns">    	
+<<<<<<< HEAD
+      <div class="row">      	    
+
+		<div class="large-12 small-12 columns">        
+
+			<div class="media-buttons">
+				<h6>Submit a video or picture for your idea.</h6>
+				<a href="#" class="medium button secondary">Video</a>
+				<a href="#" class="medium button secondary">Picture</a>
+				<a href="#" class="medium button secondary">Take a Picture</a>
+			</div>
+
+		</div>
+
+        <div class="large-8 small-12 columns">
+
+        <div class="submit-q">
+          <form>
+          	<h4>Write your idea</h4>
+          	<textarea  placeholder="small-12.columns">
+          	</textarea>
+          </form>
+         </div>
+
+         <div class="submit-q">
+          <form>
+          	<h5>What inspiration have you had to develop this idea?</h5>
+          	<textarea  placeholder="small-12.columns">
+          	</textarea>
+          </form>
+         </div>
+
+
+	    <div class="submit-q">
+          <form>
+          	<h5>What benefits/impact will this idea to the community?</h5>
+          	<textarea  placeholder="small-12.columns">
+          	</textarea>
+          </form>
+         </div>
+
+         <input type="submit" value="Submit" name="submit" class="medium button cta-button expand" />
+
+        </div>  {# end large-8 #}
+
+=======
+      <div class="row">
+        {{ render(controller('CympelCoinGiftBundle:Default:createForm')) }}
+>>>>>>> c0f91f2e88eb47ca0dffcafb0316a540bce763a2
+        <div class="large-4 small-12 columns">
+
+        	<div class="panel faq help-idea">
+	        	<h5>Need help with your idea?</h5>
+	        	<p>Normal Paragraph, Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec ullamcorper nulla non metus auctor fringilla. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. </p>
+	        	<p><a href="#">See more</a></p>
+	        </div>
+
+	        <div class="panel faq">
+	        	<h5>Who will fund this cause?</h5>
+	        	<p>Normal Paragraph, Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec ullamcorper nulla non metus auctor fringilla. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. </p>
+	        	<p><a href="#">See more</a></p>
+	        </div>
+
+	        <div class="panel faq">
+	        	<h5>How notifications works</h5>
+	        	<p>Normal Paragraph, Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec ullamcorper nulla non metus auctor fringilla. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. </p>
+	        	<p><a href="#">See more</a></p>
+	        </div>
+					
+
+        </div>  {# end large-4 #}
+
+      </div> {# end row #}
+
+  </div>
+
+<!-- End trending this week -->
+
+    <!-- Footer -->
+
+  <footer class="row">
+    <div class="large-12 columns">
+      <hr>
+      <div class="row">
+        <div class="large-6 columns">
+          <p>&copy; Copyright no one at all. Go to town.</p>
+        </div>
+        <div class="large-6 columns">
+          <ul class="inline-list right">
+            <li><a href="#">Link 1</a></li>
+            <li><a href="#">Link 2</a></li>
+            <li><a href="#">Link 3</a></li>
+            <li><a href="#">Link 4</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+
+	{{ include('CympelCoinGiftBundle:Default:scripts.html.twig')}}
+
+	</body>
+
+{% endblock body %}
+

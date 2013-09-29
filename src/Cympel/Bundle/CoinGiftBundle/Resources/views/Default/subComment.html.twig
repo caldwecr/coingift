@@ -1,4 +1,4 @@
-<div class="comment" style="border: 5px solid red;">
+<div class="subComment">
     <div class="voting">
         <a href="#">
             <div class="voteUp">
@@ -14,34 +14,30 @@
             </div>
         </a>
     </div>
-        <span class="commentAuthor">
+    <div class="subCommentBox">
+
+        <h5 class="commentAuthor">
             {{ comment.user.firstName }} {{ comment.user.lastName }}
-        </span>
+        </h5>
     <input type="hidden" class="commentId" id="comment{{ comment.id }}" value="{{ comment.id }}" />
     <div class="commentMessage">
-        {{ comment.message }}
+        <p>
+            {{ comment.message }}
+        </p>
     </div>
-    <div class="commentFooter">
+        
+    <ul class="commentFooter group">
+        <li class="commentOnComment"><a href="#">Comment</a></li>
+        <li class="reportComment"><a href="#">Report</a></li>
+        <li class="commentDate">{{ comment.date }}</li>
+    </ul>    
+        
+    <div class="putSubCommentHere" id="putSubCommentHere{{ comment.id }}"></div>
 
-        <div class="commentOnComment" style="border: 1px solid blue;">
-            Comment
-        </div>
-
-        <a href="#">
-                <span class="reportComment">
-                    Report
-                </span>
-        </a>
-            <span class="commentDate">
-                {{ comment.date }}
-            </span>
-    </div>
-    <div class="putSubCommentHere" id="putSubCommentHere{{ comment.id }}">
-
-    </div>
     {% for child in comment.children %}
         {{ render(controller('CympelCoinGiftBundle:Default:subComments', {
         'commentId': child.id
         })) }}
     {% endfor %}
+    </div>
 </div>

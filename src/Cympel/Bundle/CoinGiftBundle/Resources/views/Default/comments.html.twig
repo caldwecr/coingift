@@ -1,7 +1,9 @@
+<h4>Join the conversation</h4>
 {% for comment in comments %}
     {% if comment.parent %}
 
     {% else %}
+
     <div class="comment">
         <div class="voting">
             <a href="#">
@@ -18,36 +20,33 @@
                 </div>
             </a>
         </div>
-        <span class="commentAuthor">
-            {{ comment.user.firstName }} {{ comment.user.lastName }}
-        </span>
-        <input type="hidden" class="commentId" id="comment{{ comment.id }}" value="{{ comment.id }}" />
-        <div class="commentMessage">
-            {{ comment.message }}
-        </div>
-        <div class="commentFooter">
+        <div class="subCommentBox group">
 
-            <div class="commentOnComment" style="border: 1px solid blue;">
-                Comment
+            <h5 class="commentAuthor">
+                {{ comment.user.firstName }} {{ comment.user.lastName }}
+            </h5>
+            <input type="hidden" class="commentId" id="comment{{ comment.id }}" value="{{ comment.id }}" />
+            <div class="commentMessage">
+                <p>{{ comment.message }}</p>
+            </div>    
+                    
+            <ul class="commentFooter group">
+                <li class="commentOnComment"><a href="#">Comment</a></li>
+                <li class="reportComment"><a href="#">Report</a></li>
+                <li class="commentDate">{{ comment.date }}</li>
+            </ul>    
+                        
+            <div class="putSubCommentHere" id="putSubCommentHere{{ comment.id }}">
+
             </div>
-
-            <a href="#">
-                <span class="reportComment">
-                    Report
-                </span>
-            </a>
-            <span class="commentDate">
-                {{ comment.date }}
-            </span>
-        </div>
-        <div class="putSubCommentHere" id="putSubCommentHere{{ comment.id }}">
+            {% for child in comment.children %}
+                {{ render(controller('CympelCoinGiftBundle:Default:subComments', {
+                    'commentId': child.id
+                })) }}
+            {% endfor %}
 
         </div>
-        {% for child in comment.children %}
-            {{ render(controller('CympelCoinGiftBundle:Default:subComments', {
-                'commentId': child.id
-            })) }}
-        {% endfor %}
+
     </div>
     {% endif %}
 {% endfor %}

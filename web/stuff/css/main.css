@@ -4767,7 +4767,7 @@ ul.main-nav {
 
 /* billboard */
 .billboard {
-  background: url("/assets/images/billboard-bg.jpg") repeat;
+  background: url("/stuff/images/billboard-bg.jpg") repeat;
   height: 321px;
   width: 100%;
   margin: 20px 0;

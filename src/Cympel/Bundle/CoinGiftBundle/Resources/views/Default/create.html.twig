@@ -12,50 +12,8 @@
 
   <div class="row">
     <div class="large-12 columns">    	
-      <div class="row">      	    
-
-		<div class="large-12 small-12 columns">        
-
-			<div class="media-buttons">
-				<h6>Submit a video or picture for your idea.</h6>
-				<a href="#" class="medium button secondary">Video</a>
-				<a href="#" class="medium button secondary">Picture</a>
-				<a href="#" class="medium button secondary">Take a Picture</a>
-			</div>
-
-		</div>
-
-        <div class="large-8 small-12 columns">
-
-        <div class="submit-q">
-          <form>
-          	<h4>Write your idea</h4>
-          	<textarea  placeholder="small-12.columns">
-          	</textarea>
-          </form>
-         </div>
-
-         <div class="submit-q">
-          <form>
-          	<h5>What inspiration have you had to develop this idea?</h5>
-          	<textarea  placeholder="small-12.columns">
-          	</textarea>
-          </form>
-         </div>
-
-
-	    <div class="submit-q">
-          <form>
-          	<h5>What benefits/impact will this idea to the community?</h5>
-          	<textarea  placeholder="small-12.columns">
-          	</textarea>
-          </form>
-         </div>
-
-         <input type="submit" value="Submit" name="submit" class="medium button expand" />
-
-        </div>  {# end large-8 #}
-
+      <div class="row">
+        {{ render(controller('CympelCoinGiftBundle:Default:createForm')) }}
         <div class="large-4 small-12 columns">
 
         	<div class="panel faq help-idea">

@@ -9825,4 +9825,12 @@ $(function() {
             console.log('error');
         });
     });
+    $('div.commentOnComment').click(function(){
+        console.log('commentOnComment clicked');
+        var parentCommentId = $(this).parents('div.comment').find('.commentId').val();
+        var request = $.ajax({
+            url: "/app_dev.php/coin/gift/new/comment/comment/" + parentCommentId + "",
+            dataType: "html"
+        });
+    });
 });

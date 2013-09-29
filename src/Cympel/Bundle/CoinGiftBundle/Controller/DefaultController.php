@@ -145,6 +145,17 @@ class DefaultController extends Controller
         ));
     }
 
+    public function subCommentsAction($commentId)
+    {
+        $repository = $this->getDoctrine()
+            ->getRepository('CympelCoinGiftBundle:Comment');
+        $comment = $repository->find($commentId);
+
+        return $this->render('CympelCoinGiftBundle:Default:subComment.html.twig', array(
+            'comment' => $comment,
+        ));
+    }
+
     public function voteUsernameAction($commentId, $username, $voteValue)
     {
         return new JsonResponse(json_encode("vote received"));
@@ -217,6 +228,47 @@ class DefaultController extends Controller
 
             return $this->redirect($this->generateUrl('coinGiftCampaign', array(
                 'campaignName' => $campaignName,
+            )));
+        }
+        return $this->render('CympelCoinGiftBundle:Default:comment.html.twig', array(
+            'form' => $form->createView(),
+        ));
+    }
+
+    public function newCommentCommentAction(Request $request, $parentCommentId)
+    {
+        $comment = new Comment();
+
+        $repository = $this->getDoctrine()
+            ->getRepository('CympelCoinGiftBundle:User');
+        $user = $repository->find("coolguy123");
+
+        $comment->setUser($user);
+        $comment->setTimestamp(time());
+
+        $repository = $this->getDoctrine()
+            ->getRepository('CympelCoinGiftBundle:Comment');
+        $parentComment = $repository->find($parentCommentId);
+
+        $comment->setParent($parentComment);
+        $comment->setCampaign($parentComment->getCampaign());
+
+        $form = $this->createFormBuilder($comment)
+            ->setAction($this->generateUrl('coinGiftNewCommentComment', array(
+                'parentCommentId' => $parentCommentId,
+            )))
+            ->add('message', 'textarea')
+            ->getForm();
+
+        $form->handleRequest($request);
+
+        if($form->isValid()) {
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($comment);
+            $em->flush();
+
+            return $this->redirect($this->generateUrl('coinGiftCampaign', array(
+                'campaignName' => $comment->getCampaign()->getId(),
             )));
         }
         return $this->render('CympelCoinGiftBundle:Default:comment.html.twig', array(

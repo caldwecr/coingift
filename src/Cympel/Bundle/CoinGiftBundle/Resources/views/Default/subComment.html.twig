@@ -1,0 +1,44 @@
+<div class="comment" style="border: 5px solid red;">
+    <div class="voting">
+        <a href="#">
+            <div class="voteUp">
+                +
+            </div>
+        </a>
+        <div class="voteTotal">
+            {{ comment.voteTotal }}
+        </div>
+        <a href="#">
+            <div class="voteDown">
+                -
+            </div>
+        </a>
+    </div>
+        <span class="commentAuthor">
+            {{ comment.user.firstName }} {{ comment.user.lastName }}
+        </span>
+    <input type="hidden" class="commentId" id="comment{{ comment.id }}" value="{{ comment.id }}" />
+    <div class="commentMessage">
+        {{ comment.message }}
+    </div>
+    <div class="commentFooter">
+        <a href="#">
+                <span class="commentOnComment">
+                    Comment
+                </span>
+        </a>
+        <a href="#">
+                <span class="reportComment">
+                    Report
+                </span>
+        </a>
+            <span class="commentDate">
+                {{ comment.date }}
+            </span>
+    </div>
+    {% for child in comment.children %}
+        {{ render(controller('CympelCoinGiftBundle:Default:subComments', {
+        'commentId': child.id
+        })) }}
+    {% endfor %}
+</div>

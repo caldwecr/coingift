@@ -1,4 +1,7 @@
 {% for comment in comments %}
+    {% if comment.parent %}
+
+    {% else %}
     <div class="comment">
         <div class="voting">
             <a href="#">
@@ -23,11 +26,11 @@
             {{ comment.message }}
         </div>
         <div class="commentFooter">
-            <a href="#">
-                <span class="commentOnComment">
-                    Comment
-                </span>
-            </a>
+
+            <div class="commentOnComment" style="border: 1px solid blue;">
+                Comment
+            </div>
+
             <a href="#">
                 <span class="reportComment">
                     Report
@@ -37,5 +40,14 @@
                 {{ comment.date }}
             </span>
         </div>
+        <div class="putSubCommentHere" id="putSubCommentHere{{ comment.id }}">
+
+        </div>
+        {% for child in comment.children %}
+            {{ render(controller('CympelCoinGiftBundle:Default:subComments', {
+                'commentId': child.id
+            })) }}
+        {% endfor %}
     </div>
+    {% endif %}
 {% endfor %}

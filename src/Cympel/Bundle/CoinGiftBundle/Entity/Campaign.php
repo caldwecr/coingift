@@ -51,6 +51,12 @@ class Campaign implements iType
 
     /**
      * @var string
+     * @ORM\Column(type="string", length=255)
+     */
+    protected $summary;
+
+    /**
+     * @var string
      * The user's description of their idea as captured in the createForm
      * @ORM\Column(type="text")
      */
@@ -247,6 +253,24 @@ class Campaign implements iType
     {
         return $this->headlineImageUri;
     }
+
+    /**
+     * @param string $summary
+     */
+    public function setSummary($summary)
+    {
+        $this->summary = $summary;
+    }
+
+    /**
+     * @return string
+     */
+    public function getSummary()
+    {
+        return $this->summary;
+    }
+
+
 
     /**
      * @param \Doctrine\Common\Collections\ArrayCollection $notificationMethods

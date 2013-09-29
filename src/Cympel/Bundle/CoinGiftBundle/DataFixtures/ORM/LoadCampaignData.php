@@ -24,6 +24,7 @@ class LoadCampaignData extends AbstractFixture implements OrderedFixtureInterfac
         $campaign = new Campaign();
         $campaign->setUser($this->getReference('user'));
         $campaign->setId("Moon Trip");
+        $campaign->setSummary("This is a great idea because ...");
         $campaign->setBenefitsImpact("it will do great things");
         $campaign->setIdea("my idea is to fly to the moon");
         $campaign->setInspiration("my inspiration is nasa");
@@ -33,6 +34,7 @@ class LoadCampaignData extends AbstractFixture implements OrderedFixtureInterfac
         $campaign2 = new Campaign();
         $campaign2->setUser($this->getReference('user'));
         $campaign2->setId("Park clean up");
+        $campaign2->setSummary("This is a great idea because ...");
         $campaign2->setBenefitsImpact("it will do great things");
         $campaign2->setIdea("my idea is to fly to the moon23r");
         $campaign2->setInspiration("my inspiration is nasafwefw");
@@ -42,6 +44,7 @@ class LoadCampaignData extends AbstractFixture implements OrderedFixtureInterfac
         $campaign3 = new Campaign();
         $campaign3->setUser($this->getReference('user'));
         $campaign3->setId("Gun buy back");
+        $campaign3->setSummary("This is a great idea because ...");
         $campaign3->setBenefitsImpact("it will do great thingsalso");
         $campaign3->setIdea("my idea is to fly to the moon");
         $campaign3->setInspiration("my inspiration is nasa");
@@ -51,6 +54,7 @@ class LoadCampaignData extends AbstractFixture implements OrderedFixtureInterfac
         $campaign4 = new Campaign();
         $campaign4->setUser($this->getReference('user'));
         $campaign4->setId("Homeless housing");
+        $campaign4->setSummary("This is a great idea because ...");
         $campaign4->setBenefitsImpact("it will do great things4");
         $campaign4->setIdea("my idea is to fly to the moon");
         $campaign4->setInspiration("my inspiration is nasa");
@@ -60,6 +64,7 @@ class LoadCampaignData extends AbstractFixture implements OrderedFixtureInterfac
         $campaign5 = new Campaign();
         $campaign5->setUser($this->getReference('user'));
         $campaign5->setId("Downtown block demo");
+        $campaign5->setSummary("This is a great idea because ...");
         $campaign5->setBenefitsImpact("it will do great things");
         $campaign5->setIdea("my idea is to fly to the moon");
         $campaign5->setInspiration("my inspiration is nasa");
@@ -69,6 +74,7 @@ class LoadCampaignData extends AbstractFixture implements OrderedFixtureInterfac
         $campaign6 = new Campaign();
         $campaign6->setUser($this->getReference('user'));
         $campaign6->setId("Girl scout pink party");
+        $campaign6->setSummary("This is a great idea because ...");
         $campaign6->setBenefitsImpact("it will do great things");
         $campaign6->setIdea("my idea is to fly to the moon");
         $campaign6->setInspiration("my inspiration is nasa");
@@ -78,6 +84,7 @@ class LoadCampaignData extends AbstractFixture implements OrderedFixtureInterfac
         $campaign7 = new Campaign();
         $campaign7->setUser($this->getReference('user'));
         $campaign7->setId("Hack a thon");
+        $campaign7->setSummary("This is a great idea because ...");
         $campaign7->setBenefitsImpact("it will do great things");
         $campaign7->setIdea("my idea is to fly to the moon");
         $campaign7->setInspiration("my inspiration is nasa");
@@ -87,6 +94,7 @@ class LoadCampaignData extends AbstractFixture implements OrderedFixtureInterfac
         $campaign8 = new Campaign();
         $campaign8->setUser($this->getReference('user'));
         $campaign8->setId("Voter registration");
+        $campaign8->setSummary("This is a great idea because ...");
         $campaign8->setBenefitsImpact("it will do great things");
         $campaign8->setIdea("my idea is to fly to the moon");
         $campaign8->setInspiration("my inspiration is nasa");
@@ -96,6 +104,7 @@ class LoadCampaignData extends AbstractFixture implements OrderedFixtureInterfac
         $campaign9 = new Campaign();
         $campaign9->setUser($this->getReference('user2'));
         $campaign9->setId("Nintendo-4-kids");
+        $campaign9->setSummary("This is a great idea because ...");
         $campaign9->setBenefitsImpact("All children will have an original NES");
         $campaign9->setIdea("Free original nintendos for anyone under 12 that wants one");
         $campaign9->setInspiration("Mario and Luigi");

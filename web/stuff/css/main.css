@@ -4845,18 +4845,37 @@ ul.main-nav {
 /* ==========================================================================
    Create Page
    ========================================================================== */
+.openAccount {
+  background-color: #d2f0e2;
+  border: 1px solid #87ccac;
+  margin: 20px 0 0 0;
+  padding: 10px 20px; }
+  .openAccount h2 {
+    font-size: 15px;
+    color: #464646; }
+  .openAccount p {
+    font-size: 12px; }
+  .openAccount .secondary {
+    background-color: #3c813f;
+    color: #fff;
+    text-transform: uppercase;
+    border: none; }
+
 .media-buttons {
   margin: 20px 0 20px 0;
-  border-top: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
   padding-top: 10px;
-  padding-bottom: 20px; }
-  .media-buttons h5 {
-    color: #27889f; }
+  padding-bottom: 30px;
+  border-bottom: 1px solid #ddd; }
+  .media-buttons h4 {
+    color: #27889f;
+    margin-bottom: 0; }
   .media-buttons p {
     margin: 0 0 10px 0; }
   .media-buttons .button {
     margin: 0; }
+  .media-buttons .openAccount {
+    border: 1px solid red;
+    float: right; }
 
 .submit-q label {
   font-size: 20px;

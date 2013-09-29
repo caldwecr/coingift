@@ -122,4 +122,9 @@ class DefaultController extends Controller
             'nextFourCampaigns' => $nextFourCampaigns,
         ));
     }
+
+    public function giftAction($campaignName)
+    {
+        return $this->render('CympelCoinGiftBundle:Default:gift.html.twig');
+    }
 }

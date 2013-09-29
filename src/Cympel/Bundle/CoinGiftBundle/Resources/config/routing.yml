@@ -16,3 +16,6 @@ coinGiftTrending:
 coinGiftPopular:
     pattern: /popular
     defaults: { _controller: CympelCoinGiftBundle:Default:popular }
+coinGiftGift:
+    pattern: /gift/{campaignName}
+    defaults: { _controller: CympelCoinGiftBundle:Default:gift }

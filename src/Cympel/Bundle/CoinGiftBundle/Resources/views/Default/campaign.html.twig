@@ -36,7 +36,7 @@
 		              <h2>{{ campaign.giverCount }}</h2>
 		            </div>
 		            <div class="cta">
-		                <a href="#" class="button medium expand">Give To This Campaign</a>
+		                <a href="{{ path('coinGiftGift', {'campaignName': campaign.id}) }}" class="button medium expand">Give To This Campaign</a>
 		            </div>
 		            <p class="exp"><strong>Good until:</strong> October 10, 2014</p>
 				</div>			
@@ -62,7 +62,7 @@
       	</div>
 
       	<div class="blog">
-
+            {{ render(controller('CympelCoinGiftBundle:Default:newCampaignComment', {'campaignName': campaign.id})) }}
 			{{ render(controller('CympelCoinGiftBundle:Default:comments', {'campaignName': campaign.id})) }}
 
       	</div>

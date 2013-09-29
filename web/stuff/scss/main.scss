@@ -1,0 +1,107 @@
+@import "foundation";
+
+/* Typography */
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Oxygen', sans-serif;
+}
+
+body {
+	padding: 25px 0 0 0;	
+	p {
+		font-size: 14px;
+	}
+}
+
+/* Links */
+
+a:link {
+	color: rgba(60,129,63,1);
+	font-weight: bold;
+}
+a:hover {
+	color: rgba(60,129,63,.8);
+}
+a:visited {
+	color: rgba(60,129,63,.4);
+}
+
+/* Navigation */
+
+.top-bar {
+	background-color: #006f51;
+}
+ul.main-nav {
+	background-color: #006f51;
+	.idea {
+		text-transform: uppercase;
+	}
+	a:link {
+		color: #fff;
+		background-color: #006f51;
+	}
+	a:hover {
+		color: #fff;
+		background-color: #83984f!important;
+	}
+}
+.top-bar-section li a:not(.button) {
+	background-color: #006f51;
+}
+
+/* billboard */
+
+.billboard {
+	background: url("/assets/images/billboard-bg.jpg") repeat;
+	height: 321px;
+	width: 100%;
+	margin: 20px 0;
+	padding: 30px 0 0 0;
+	.stats-n-cta {		
+		background-color: rgba(255,255,255,.85);		
+	}
+}
+
+.stats-number {
+	background-color: #ebebeb;
+	padding: 20px;
+	margin: 0 0 20px 0;
+	border: 1px solid #dddddd;
+	p {
+		margin: -18px 0 0 0;
+		color: #8a8a8a;
+		span {
+			font-size: 40px;
+			color: #8a8a8a;
+			font-weight: bold;
+			margin: 0 .25em 0 0;
+			padding: 0;
+			display: inline-block;
+			line-height: 40px;
+			position: relative;
+			top: 10px;
+		}
+	}
+}
+
+/* ==========================================================================
+   Create Page
+   ========================================================================== */
+
+textarea {
+	height: 250px;
+}
+
+/* Sidebar */
+
+.help-idea {
+	margin-top: 47px;
+}
+.faq {
+	h5 {
+		font-size: 1em;		
+	}
+	p {
+		font-size: .75em;
+	}
+}

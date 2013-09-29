@@ -13,3 +13,6 @@ coinGiftCreateForm:
 coinGiftTrending:
     pattern: /trending
     defaults: { _controller: CympelCoinGiftBundle:Default:trending }
+coinGiftPopular:
+    pattern: /popular
+    defaults: { _controller: CympelCoinGiftBundle:Default:popular }

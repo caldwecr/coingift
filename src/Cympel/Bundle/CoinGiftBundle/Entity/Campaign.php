@@ -83,6 +83,14 @@ class Campaign implements iType
     protected $shareOnNetworks;
 
     /**
+     * @var string
+     *
+     * A relative or fully qualified uri for a headline image for this campaign
+     * @ORM\Column(type="text")
+     */
+    protected $headlineImageUri;
+
+    /**
      * @param \Doctrine\Common\Collections\ArrayCollection $coinGifts
      */
     public function setCoinGifts($coinGifts)
@@ -192,6 +200,22 @@ class Campaign implements iType
     public function getInspiration()
     {
         return $this->inspiration;
+    }
+
+    /**
+     * @param string $headlineImageUri
+     */
+    public function setHeadlineImageUri($headlineImageUri)
+    {
+        $this->headlineImageUri = $headlineImageUri;
+    }
+
+    /**
+     * @return string
+     */
+    public function getHeadlineImageUri()
+    {
+        return $this->headlineImageUri;
     }
 
     /**

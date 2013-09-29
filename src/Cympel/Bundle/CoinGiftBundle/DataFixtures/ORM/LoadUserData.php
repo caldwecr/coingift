@@ -29,8 +29,20 @@ class LoadUserData extends AbstractFixture implements OrderedFixtureInterface
         $user->setCreated(time());
         $user->setDisabled(false);
         $manager->persist($user);
+
+        $user2 = new User();
+        $user2->setId("smartguy1337");
+        $user2->setFirstName("Hax");
+        $user2->setLastName("Sword");
+        $user2->setBankCustomer(true);
+        $user2->setCoinBalance(500);
+        $user2->setCreated(time());
+        $user2->setDisabled(false);
+        $manager->persist($user2);
+
         $manager->flush();
         $this->addReference('user', $user);
+        $this->addReference('user2', $user2);
     }
 
     public function getOrder()

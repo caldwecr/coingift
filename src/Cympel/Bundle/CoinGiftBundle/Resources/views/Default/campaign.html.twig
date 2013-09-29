@@ -17,8 +17,8 @@
 		<div class="large-12 small-12 columns campaign-info">        
 			
 				<h3>{{ campaign.id }}</h3>
-				<div class="large-4 small-3 columns cmpgn cmpgn-image">					
-					<img src="/stuff/images/thumb-4.jpg" />
+				<div class="large-3 small-12 columns cmpgn cmpgn-image">					
+					<img src="{{ campaign.headlineImageUri }}" />
 				</div>
 			
 				<div class="large-4 small-3 columns cmpgn">
@@ -26,14 +26,14 @@
 					<p>Large Subhead Text, Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec ullamcorper nulla non. Large Subhead Text, Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec ullamcorper nulla non. </p>
 				</div>
 			
-				<div class="large-4 small-3 columns cmpgn donate-panel group">
+				<div class="large-5 small-3 columns cmpgn donate-panel group">
 					<div class="box">
-		              <p class="subheader">Funded</p>
-		              <h1>9,012</h1>
+		              <p class="subheader">Amount funded</p>
+		              <h1>${{ campaign.coinTotal|number_format(2, '.', ',') }}</h1>
 		            </div>
 		            <div class="box">
-		              <p class="subheader">Givers</p>
-		              <h1>29</h1>
+		              <p class="subheader">Number of Givers</p>
+		              <h2>{{ campaign.giverCount }}</h2>
 		            </div>
 		            <div class="cta">
 		                <a href="#" class="button medium expand">Give To This Campaign</a>

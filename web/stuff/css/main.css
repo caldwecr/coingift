@@ -4797,6 +4797,17 @@ ul.main-nav {
 /* ==========================================================================
    Create Page
    ========================================================================== */
+.media-buttons {
+  margin: 20px 0 20px 0;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  padding-top: 10px;
+  padding-bottom: 20px; }
+  .media-buttons p {
+    margin: 0 0 10px 0; }
+  .media-buttons .button {
+    margin: 0; }
+
 textarea {
   height: 250px; }
 
